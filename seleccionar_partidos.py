@@ -7,12 +7,21 @@ from pathlib import Path
 
 from fetch_data import obtener_fixtures_por_fecha
 from google_favoritos import normalizar, obtener_favoritos_google
+from thesportsdb_aliases import nombres_alternativos
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 ARCHIVO_SALIDA = DATA_DIR / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
-VERSION_SELECCION = 2
+VERSION_SELECCION = 4
+
+# Variantes frecuentes entre la hoja y ESPN. Se usan solo para localizar
+# el fixture: el mensaje final siempre conserva el nombre oficial de ESPN.
+ALIAS_EQUIPOS = {
+    "wolves": "wolverhampton wanderers",
+    "aarhus": "agf",
+}
+SUFIJOS_EQUIPO = {"fc", "cf", "fk", "ff", "sc", "afc", "ac"}
 
 
 def fecha_local_hoy():
@@ -33,8 +42,14 @@ def ya_se_completo_hoy():
         return False
 
 
+def _normalizar_equipo(nombre):
+    nombre = normalizar(nombre)
+    nombre = " ".join(palabra for palabra in nombre.split() if palabra not in SUFIJOS_EQUIPO)
+    return ALIAS_EQUIPOS.get(nombre, nombre)
+
+
 def _coincide(nombre_hoja, nombre_espn):
-    a, b = normalizar(nombre_hoja), normalizar(nombre_espn)
+    a, b = _normalizar_equipo(nombre_hoja), _normalizar_equipo(nombre_espn)
     return bool(a and b and (a == b or a in b or b in a or SequenceMatcher(None, a, b).ratio() >= 0.82))
 
 
@@ -50,6 +65,26 @@ def _lado_favorito(favorito_hoja, local, visitante):
 
 def _buscar_fixture(entrada, fixtures):
     candidatos = [f for f in fixtures if _coincide(entrada["local"], f["teams"]["home"]["name"]) and _coincide(entrada["visitante"], f["teams"]["away"]["name"])]
+    if len(candidatos) == 1:
+        return candidatos[0]
+
+    # Si uno de los dos equipos ya coincide, TheSportsDB puede traducir la
+    # abreviatura del otro (ej. Wolves -> Wolverhampton Wanderers). Nunca se
+    # acepta una coincidencia si no quedan validados ambos equipos.
+    candidatos = []
+    for fixture in fixtures:
+        local_espn = fixture["teams"]["home"]["name"]
+        visitante_espn = fixture["teams"]["away"]["name"]
+        local_ok = _coincide(entrada["local"], local_espn)
+        visitante_ok = _coincide(entrada["visitante"], visitante_espn)
+        if local_ok and not visitante_ok:
+            alternativos = nombres_alternativos(entrada["visitante"])
+            if any(_coincide(alternativo, visitante_espn) for alternativo in alternativos):
+                candidatos.append(fixture)
+        elif visitante_ok and not local_ok:
+            alternativos = nombres_alternativos(entrada["local"])
+            if any(_coincide(alternativo, local_espn) for alternativo in alternativos):
+                candidatos.append(fixture)
     return candidatos[0] if len(candidatos) == 1 else None
 
 
