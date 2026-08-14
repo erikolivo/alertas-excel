@@ -8,6 +8,9 @@ on:
     - cron: "*/5 9-10 * * *"   # 09:00-10:59 UTC = 04:00-05:59 local
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   seleccionar:
     runs-on: ubuntu-latest

@@ -6,6 +6,9 @@ on:
     - cron: "0,15,30,45 11 * * *"   # 11:00-11:59 UTC = 06:00-06:59 local
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   reportar:
     runs-on: ubuntu-latest

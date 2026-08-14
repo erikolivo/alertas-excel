@@ -148,8 +148,8 @@ def _fecha_espn(fecha_iso):
 
 def obtener_fixtures_por_fecha(fecha_iso):
     """
-    Devuelve los fixtures de 'fecha_iso' (YYYY-MM-DD) de todas las ligas
-    en LIGAS_ESPN, en la MISMA forma que antes devolvia API-Football
+    Devuelve los fixtures de 'fecha_iso' (YYYY-MM-DD) desde el marcador
+    global de ESPN, en la MISMA forma que antes devolvia API-Football
     (fixture.id, teams.home/away.id/name, league.country/name) para que
     seleccionar_partidos.py no cambie su logica de lectura.
 
@@ -157,10 +157,47 @@ def obtener_fixtures_por_fecha(fecha_iso):
     vino) y el slug de liga -- ver extraer_favorito_odds_espn() y los
     campos "_liga_slug" / "_odds_raw" de cada fixture.
 
-    1 peticion por liga en LIGAS_ESPN (no se uso el endpoint 'all' -- se
-    investigo, pero no se pudo confirmar que traiga pais/nombre de liga
-    limpio por partido; se prefirio esta via, mas lenta pero verificada).
+    Se usa una petición global; si falla, se vuelve a la lista curada
+    LIGAS_ESPN como respaldo.
     """
+    # El marcador global incluye ligas que no están en LIGAS_ESPN
+    # (divisiones inferiores y competiciones regionales). El valor "all"
+    # también sirve para pedir su summary durante la vigilancia en vivo.
+    url_global = f"{BASE_ESPN_SITE}/all/scoreboard?dates={_fecha_espn(fecha_iso)}"
+    try:
+        r = requests.get(url_global, timeout=TIMEOUT)
+        r.raise_for_status()
+        data = r.json()
+        try:
+            from cuota_espn import registrar_uso
+            registrar_uso()
+        except Exception:
+            pass
+
+        fixtures = []
+        for evento in data.get("events", []):
+            try:
+                comp = evento["competitions"][0]
+                home = next(c for c in comp["competitors"] if c["homeAway"] == "home")
+                away = next(c for c in comp["competitors"] if c["homeAway"] == "away")
+            except (KeyError, IndexError, StopIteration):
+                continue
+            liga = evento.get("league", {})
+            fixtures.append({
+                "fixture": {"id": evento["id"], "date": evento["date"]},
+                "teams": {
+                    "home": {"id": home["team"]["id"], "name": home["team"]["displayName"]},
+                    "away": {"id": away["team"]["id"], "name": away["team"]["displayName"]},
+                },
+                "league": {"country": liga.get("country", ""), "name": liga.get("name", "")},
+                "_liga_slug": "all",
+                "_odds_raw": comp.get("odds"),
+            })
+        print(f"ESPN global: {len(fixtures)} fixtures encontrados.")
+        return fixtures
+    except Exception as e:
+        print(f"[AVISO] No se pudo consultar el marcador global de ESPN: {e}. Se usará la lista de respaldo.")
+
     fixtures = []
     for slug, (pais, nombre_liga) in LIGAS_ESPN.items():
         url = f"{BASE_ESPN_SITE}/{slug}/scoreboard?dates={_fecha_espn(fecha_iso)}"

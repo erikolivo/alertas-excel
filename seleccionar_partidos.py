@@ -12,6 +12,7 @@ DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 ARCHIVO_SALIDA = DATA_DIR / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
+VERSION_SELECCION = 2
 
 
 def fecha_local_hoy():
@@ -25,6 +26,7 @@ def ya_se_completo_hoy():
         datos = json.loads(ARCHIVO_SALIDA.read_text(encoding="utf-8"))
         return (
             datos.get("fecha") == fecha_local_hoy()
+            and datos.get("seleccion_version") == VERSION_SELECCION
             and all(p.get("fuente_favorito") == "Google Sheets" for p in datos.get("partidos", []))
         )
     except (json.JSONDecodeError, OSError):
@@ -96,7 +98,7 @@ def seleccionar():
             seleccionados.append(partido)
             vistos.add(partido["fixture_id"])
     seleccionados.sort(key=lambda partido: partido["hora_inicio"])
-    ARCHIVO_SALIDA.write_text(json.dumps({"fecha": hoy, "partidos": seleccionados}, ensure_ascii=False, indent=2), encoding="utf-8")
+    ARCHIVO_SALIDA.write_text(json.dumps({"fecha": hoy, "seleccion_version": VERSION_SELECCION, "partidos": seleccionados}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Guardado en {ARCHIVO_SALIDA}: {len(seleccionados)} partido(s) de Google Sheets. Sin fixture: {sin_fixture}; favorito inválido: {favorito_invalido}.")
 
 

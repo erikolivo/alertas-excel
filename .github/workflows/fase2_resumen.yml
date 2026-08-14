@@ -10,6 +10,9 @@ on:
     - cron: "0,5,10,15 12 * * *"   # 12:00-12:15 UTC = 07:00-07:15 local
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   resumen:
     runs-on: ubuntu-latest
