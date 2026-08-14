@@ -290,7 +290,7 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, mom_favorito=None, pro
         texto,
         f"<b>{escapar_html(partido['partido'])}</b> -- min {minuto}",
         f"Marcador: {snap_actual['goles_local']}-{snap_actual['goles_visitante']}",
-        f"Favorito: {escapar_html(partido['favorito'])} (cuota inicial {partido['cuota_inicial']})",
+        f"Favorito: {escapar_html(partido['favorito'])} (Google Sheets)",
         "",
         f"\u2B50 <b>{escapar_html(partido['favorito'])}</b> vs <b>{escapar_html(partido['no_favorito'])}</b>",
         f"Tiros totales: {_n(stats_fav,'totalShots')} vs {_n(stats_riv,'totalShots')}",

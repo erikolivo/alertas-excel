@@ -234,7 +234,7 @@ def _actualizar_excel(fecha, partidos, usadas):
         hoja1.append([
             fecha, p["partido"], p["favorito"],
             "Local" if p["favorito_es_local"] else "Visitante",
-            p["cuota_inicial"], p["probabilidad_inicial"],
+            p.get("cuota_inicial", ""), p.get("probabilidad_inicial", ""),
             p.get("resultado_final") or "sin resolver",
             "SI" if p.get("acierto") is True else ("NO" if p.get("acierto") is False else "?"),
             len(p.get("alertas_enviadas", [])),
