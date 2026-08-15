@@ -12,16 +12,70 @@ from thesportsdb_aliases import nombres_alternativos
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 ARCHIVO_SALIDA = DATA_DIR / "partidos_hoy.json"
+ARCHIVO_CACHE_ALIAS = DATA_DIR / "alias_equipos_cache.json"
+ARCHIVO_PENDIENTES = DATA_DIR / "pendientes_revision.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
 VERSION_SELECCION = 4
 
-# Variantes frecuentes entre la hoja y ESPN. Se usan solo para localizar
-# el fixture: el mensaje final siempre conserva el nombre oficial de ESPN.
+# Alias FIJADOS A MANO -- para casos que se quieren garantizar sin
+# depender de que el fuzzy match o TheSportsDB los resuelvan. La
+# mayoria de los casos nuevos ya NO necesitan pasar por aqui: se
+# resuelven y se recuerdan solos en ARCHIVO_CACHE_ALIAS (ver
+# _registrar_alias_aprendido mas abajo).
 ALIAS_EQUIPOS = {
     "wolves": "wolverhampton wanderers",
     "aarhus": "agf",
 }
 SUFIJOS_EQUIPO = {"fc", "cf", "fk", "ff", "sc", "afc", "ac"}
+
+_cache_alias_memoria = None
+
+
+def _cargar_cache_alias():
+    global _cache_alias_memoria
+    if _cache_alias_memoria is None:
+        if ARCHIVO_CACHE_ALIAS.exists():
+            try:
+                _cache_alias_memoria = json.loads(ARCHIVO_CACHE_ALIAS.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                _cache_alias_memoria = {}
+        else:
+            _cache_alias_memoria = {}
+    return _cache_alias_memoria
+
+
+def _registrar_alias_aprendido(nombre_hoja, nombre_espn):
+    """Guarda nombre_de_la_hoja -> nombre_oficial_ESPN la primera vez
+    que se resuelve por un camino no trivial (fuzzy o TheSportsDB), asi
+    el proximo dia que aparezca ese mismo nombre en la hoja el match es
+    directo -- sin gastar peticion a TheSportsDB ni depender de que el
+    ratio de similitud vuelva a alcanzar el corte."""
+    clave = normalizar(nombre_hoja)
+    if not clave or clave == normalizar(nombre_espn):
+        return  # ya coincide directo, no hace falta aprender nada
+    cache = _cargar_cache_alias()
+    if cache.get(clave) == nombre_espn:
+        return
+    cache[clave] = nombre_espn
+    ARCHIVO_CACHE_ALIAS.write_text(json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
+
+
+def _registrar_pendiente(entrada, motivo, fecha):
+    """Log acotado de partidos que no se lograron ubicar en ESPN, para
+    revisar de vez en cuando (probablemente ligas que ESPN no cubre, o
+    un alias nuevo que conviene fijar a mano en ALIAS_EQUIPOS)."""
+    pendientes = []
+    if ARCHIVO_PENDIENTES.exists():
+        try:
+            pendientes = json.loads(ARCHIVO_PENDIENTES.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pendientes = []
+    pendientes.append({
+        "fecha": fecha, "local": entrada["local"], "visitante": entrada["visitante"],
+        "favorito": entrada.get("favorito"), "motivo": motivo,
+    })
+    pendientes = pendientes[-200:]
+    ARCHIVO_PENDIENTES.write_text(json.dumps(pendientes, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def fecha_local_hoy():
@@ -43,9 +97,12 @@ def ya_se_completo_hoy():
 
 
 def _normalizar_equipo(nombre):
-    nombre = normalizar(nombre)
-    nombre = " ".join(palabra for palabra in nombre.split() if palabra not in SUFIJOS_EQUIPO)
-    return ALIAS_EQUIPOS.get(nombre, nombre)
+    nombre_norm = normalizar(nombre)
+    equivalente_aprendido = _cargar_cache_alias().get(nombre_norm)
+    if equivalente_aprendido:
+        nombre_norm = normalizar(equivalente_aprendido)
+    nombre_norm = " ".join(palabra for palabra in nombre_norm.split() if palabra not in SUFIJOS_EQUIPO)
+    return ALIAS_EQUIPOS.get(nombre_norm, nombre_norm)
 
 
 def _coincide(nombre_hoja, nombre_espn):
@@ -63,29 +120,41 @@ def _lado_favorito(favorito_hoja, local, visitante):
     return None
 
 
+def _coincide_con_alternativas(nombre_hoja, nombre_espn):
+    """Coincidencia directa (normalizacion + fuzzy) y, si esa falla,
+    contra los nombres alternativos que reporte TheSportsDB para el
+    nombre de la hoja (ej. 'Viborg' -> 'Viborg FF', 'Wolves' ->
+    'Wolverhampton Wanderers')."""
+    if _coincide(nombre_hoja, nombre_espn):
+        return True
+    return any(_coincide(alternativo, nombre_espn) for alternativo in nombres_alternativos(nombre_hoja))
+
+
 def _buscar_fixture(entrada, fixtures):
     candidatos = [f for f in fixtures if _coincide(entrada["local"], f["teams"]["home"]["name"]) and _coincide(entrada["visitante"], f["teams"]["away"]["name"])]
     if len(candidatos) == 1:
         return candidatos[0]
 
-    # Si uno de los dos equipos ya coincide, TheSportsDB puede traducir la
-    # abreviatura del otro (ej. Wolves -> Wolverhampton Wanderers). Nunca se
-    # acepta una coincidencia si no quedan validados ambos equipos.
-    candidatos = []
-    for fixture in fixtures:
-        local_espn = fixture["teams"]["home"]["name"]
-        visitante_espn = fixture["teams"]["away"]["name"]
-        local_ok = _coincide(entrada["local"], local_espn)
-        visitante_ok = _coincide(entrada["visitante"], visitante_espn)
-        if local_ok and not visitante_ok:
-            alternativos = nombres_alternativos(entrada["visitante"])
-            if any(_coincide(alternativo, visitante_espn) for alternativo in alternativos):
-                candidatos.append(fixture)
-        elif visitante_ok and not local_ok:
-            alternativos = nombres_alternativos(entrada["local"])
-            if any(_coincide(alternativo, local_espn) for alternativo in alternativos):
-                candidatos.append(fixture)
-    return candidatos[0] if len(candidatos) == 1 else None
+    # Segundo intento: se prueban los nombres alternativos de
+    # TheSportsDB en AMBOS lados de forma independiente (antes solo se
+    # probaba en el lado que no habia coincidido directo, asumiendo que
+    # el otro si coincidia -- eso dejaba sin cubrir el caso de que los
+    # DOS nombres de la hoja difirieran del oficial de ESPN).
+    candidatos = [
+        f for f in fixtures
+        if _coincide_con_alternativas(entrada["local"], f["teams"]["home"]["name"])
+        and _coincide_con_alternativas(entrada["visitante"], f["teams"]["away"]["name"])
+    ]
+    if len(candidatos) != 1:
+        return None
+
+    fixture = candidatos[0]
+    # Se encontro por un camino no trivial -- se aprende el alias para
+    # que el proximo dia sea un match directo sin volver a depender de
+    # TheSportsDB ni del fuzzy match.
+    _registrar_alias_aprendido(entrada["local"], fixture["teams"]["home"]["name"])
+    _registrar_alias_aprendido(entrada["visitante"], fixture["teams"]["away"]["name"])
+    return fixture
 
 
 def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja):
@@ -123,6 +192,7 @@ def seleccionar():
         if fixture is None:
             sin_fixture += 1
             print(f"[AVISO] Fila {entrada['fila_hoja']}: no se encontró en ESPN: {entrada['local']} vs {entrada['visitante']}")
+            _registrar_pendiente(entrada, "no_encontrado_en_espn", hoy)
             continue
         partido = _partido_para_vigilar(fixture, entrada["favorito"], entrada["fila_hoja"])
         if partido is None:
