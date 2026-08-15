@@ -161,6 +161,7 @@ mapeo_ligas_odds_api.py    -> mapeo liga -> sport_key de The Odds API (sin cambi
 bootstrap_ligas.py         -> carga historica manual (football-data.co.uk, sin cambios)
 seleccionar_partidos.py   -> Fase 1: favoritos de Google Sheets + localización en ESPN
 google_favoritos.py       -> descarga y valida los favoritos diarios de Google Sheets
+thesportsdb_aliases.py    -> respaldo gratuito de nombres alternativos de equipos
 resumen.py                  -> Fase 2 (sin cambios funcionales)
 monitor.py                  -> Fase 3, RECONSTRUIDA -- leer MIGRACION_ESPN.md
 cerrar_resultados.py       -> Fase 4, AJUSTADA a ESPN
