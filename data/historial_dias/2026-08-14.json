@@ -1,6 +1,5 @@
 {
   "fecha": "2026-08-14",
-  "seleccion_version": 2,
   "partidos": [
     {
       "partido": "IF Elfsborg vs Västerås SK",
@@ -6566,5 +6565,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 14
 }
