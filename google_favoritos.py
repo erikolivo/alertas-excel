@@ -7,7 +7,7 @@ import unicodedata
 from datetime import date, datetime
 
 
-SHEET_ID = "1KnaTUoCLHhgGgmdpBUo_vpbAhQawjSh7LBFpZcHe1cs"
+SHEET_ID = "1j7RV3cPLcwHZwzCaxqLHVrNxN2ZkFckxyMacgFiVzlA"
 GID = "0"
 URL_EXPORTACION = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={GID}"
 TIMEOUT = 30
