@@ -87,10 +87,13 @@ def ya_se_completo_hoy():
         return False
     try:
         datos = json.loads(ARCHIVO_SALIDA.read_text(encoding="utf-8"))
+        partidos = datos.get("partidos", [])
         return (
             datos.get("fecha") == fecha_local_hoy()
             and datos.get("seleccion_version") == VERSION_SELECCION
-            and all(p.get("fuente_favorito") == "Google Sheets" for p in datos.get("partidos", []))
+            and len(partidos) > 0  # 0 partidos casi siempre es un fallo silencioso, no un dia sin partidos --
+                                    # no se marca como "completo" para que los reintentos (04:00-05:59) sigan insistiendo
+            and all(p.get("fuente_favorito") == "Google Sheets" for p in partidos)
         )
     except (json.JSONDecodeError, OSError):
         return False
