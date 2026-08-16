@@ -364,13 +364,13 @@
       "nombre": "Minnesota United FC",
       "pais": "USA",
       "liga": "Leagues Cup",
-      "rating": 1662.31,
-      "rd": 290.32,
-      "vol": 0.06,
-      "partidos_jugados": 1,
+      "rating": 1624.0,
+      "rd": 256.35,
+      "vol": 0.059999,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-08-12"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-08-16"
     },
     "espn:226": {
       "nombre": "Atlante",
@@ -388,25 +388,25 @@
       "nombre": "Real Salt Lake",
       "pais": "USA",
       "liga": "Leagues Cup",
-      "rating": 1500.0,
-      "rd": 350.0,
-      "vol": 0.06,
-      "partidos_jugados": 0,
+      "rating": 1557.62,
+      "rd": 286.93,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
       "partidos_bootstrap": 0,
-      "partidos_reales": 0,
-      "ultima_actualizacion": null
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
     },
     "espn:17851": {
       "nombre": "FC Juarez",
       "pais": "Mexico",
       "liga": "Leagues Cup",
-      "rating": 1500.0,
-      "rd": 350.0,
+      "rating": 1337.69,
+      "rd": 290.32,
       "vol": 0.06,
-      "partidos_jugados": 0,
+      "partidos_jugados": 1,
       "partidos_bootstrap": 0,
-      "partidos_reales": 0,
-      "ultima_actualizacion": null
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
     },
     "espn:232": {
       "nombre": "Tigres UANL",
@@ -604,13 +604,13 @@
       "nombre": "Monterrey",
       "pais": "Mexico",
       "liga": "Leagues Cup",
-      "rating": 1500.0,
-      "rd": 350.0,
+      "rating": 1662.31,
+      "rd": 290.32,
       "vol": 0.06,
-      "partidos_jugados": 0,
+      "partidos_jugados": 1,
       "partidos_bootstrap": 0,
-      "partidos_reales": 0,
-      "ultima_actualizacion": null
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
     },
     "espn:18986": {
       "nombre": "Nashville SC",
@@ -652,13 +652,13 @@
       "nombre": "San Diego FC",
       "pais": "USA",
       "liga": "Leagues Cup",
-      "rating": 1500.0,
-      "rd": 350.0,
+      "rating": 1662.31,
+      "rd": 290.32,
       "vol": 0.06,
-      "partidos_jugados": 0,
+      "partidos_jugados": 1,
       "partidos_bootstrap": 0,
-      "partidos_reales": 0,
-      "ultima_actualizacion": null
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
     },
     "espn:231": {
       "nombre": "Puebla",
@@ -676,13 +676,13 @@
       "nombre": "LAFC",
       "pais": "USA",
       "liga": "Leagues Cup",
-      "rating": 1500.0,
-      "rd": 350.0,
+      "rating": 1337.69,
+      "rd": 290.32,
       "vol": 0.06,
-      "partidos_jugados": 0,
+      "partidos_jugados": 1,
       "partidos_bootstrap": 0,
-      "partidos_reales": 0,
-      "ultima_actualizacion": null
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
     },
     "espn:222": {
       "nombre": "Querétaro",
@@ -1487,6 +1487,78 @@
       "partidos_bootstrap": 0,
       "partidos_reales": 1,
       "ultima_actualizacion": "2026-08-15"
+    },
+    "espn:6077": {
+      "nombre": "Houston Dynamo FC",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
+    },
+    "espn:187": {
+      "nombre": "LA Galaxy",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
+    },
+    "espn:184": {
+      "nombre": "Colorado Rapids",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
+    },
+    "espn:186": {
+      "nombre": "Sporting Kansas City",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
+    },
+    "espn:191": {
+      "nombre": "San Jose Earthquakes",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
+    },
+    "espn:21812": {
+      "nombre": "St. Louis CITY SC",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-16"
     }
   }
 }

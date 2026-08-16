@@ -1,6 +1,5 @@
 {
   "fecha": "2026-08-15",
-  "seleccion_version": 5,
   "partidos": [
     {
       "partido": "Houston Dynamo FC vs LA Galaxy",
@@ -163,5 +162,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 7
 }
