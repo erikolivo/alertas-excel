@@ -18,7 +18,16 @@ _ENCABEZADOS = {
     "visitante": {"visitante", "away", "equipo visitante", "fuera"},
     "favorito": {"favorito", "favourite", "favorite", "pick", "pronostico", "seleccion", "pronostico pick recomendado"},
     "fecha": {"fecha", "date", "dia"},
+    "confianza": {"confianza", "confidence", "certeza"},
 }
+
+# Columnas para las que NUNCA se debe aceptar un encabezado con "%" --
+# ej. "% Local" / "% Visitante" se normalizan a exactamente "local" /
+# "visitante" (el simbolo % se elimina), quedando identicas al
+# encabezado real del equipo ("Local" / "Visitante"). Sin este filtro,
+# _columna() podia devolver la columna de PORCENTAJE en vez de la del
+# NOMBRE del equipo si el porcentaje aparece antes en la hoja.
+_TIPOS_QUE_EXCLUYEN_PORCENTAJE = {"local", "visitante", "partido", "favorito"}
 
 
 def normalizar(texto):
@@ -30,7 +39,8 @@ def normalizar(texto):
 
 def _columna(encabezados, tipo):
     candidatos = _ENCABEZADOS[tipo]
-    return next((h for h in encabezados if normalizar(h) in candidatos or any(c in normalizar(h) for c in candidatos)), None)
+    elegibles = [h for h in encabezados if "%" not in h] if tipo in _TIPOS_QUE_EXCLUYEN_PORCENTAJE else encabezados
+    return next((h for h in elegibles if normalizar(h) in candidatos or any(c in normalizar(h) for c in candidatos)), None)
 
 
 def _separar_partido(valor):
@@ -70,6 +80,7 @@ def interpretar_csv(contenido, hoy=None):
     encabezados = list(filas[0].keys())
     col_partido, col_local, col_visitante = (_columna(encabezados, tipo) for tipo in ("partido", "local", "visitante"))
     col_favorito, col_fecha = _columna(encabezados, "favorito"), _columna(encabezados, "fecha")
+    col_confianza = _columna(encabezados, "confianza")
     if not col_favorito or not (col_partido or (col_local and col_visitante)):
         raise ValueError("La hoja debe tener Favorito (o Pick) y Partido, o las columnas Local y Visitante. Encabezados: " + ", ".join(encabezados))
 
@@ -85,7 +96,11 @@ def interpretar_csv(contenido, hoy=None):
         if not local or not visitante:
             local, visitante = _separar_partido(fila.get(col_partido))
         if local and visitante:
-            favoritos.append({"local": local, "visitante": visitante, "favorito": favorito, "fila_hoja": numero})
+            confianza_texto = str(fila.get(col_confianza, "")).strip() if col_confianza else ""
+            favoritos.append({
+                "local": local, "visitante": visitante, "favorito": favorito, "fila_hoja": numero,
+                "confianza_texto": confianza_texto, "confianza_estrellas": confianza_texto.count("★"),
+            })
     return favoritos
 
 

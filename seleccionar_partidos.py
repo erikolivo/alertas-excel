@@ -15,7 +15,7 @@ ARCHIVO_SALIDA = DATA_DIR / "partidos_hoy.json"
 ARCHIVO_CACHE_ALIAS = DATA_DIR / "alias_equipos_cache.json"
 ARCHIVO_PENDIENTES = DATA_DIR / "pendientes_revision.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
-VERSION_SELECCION = 4
+VERSION_SELECCION = 5
 
 # Alias FIJADOS A MANO -- para casos que se quieren garantizar sin
 # depender de que el fuzzy match o TheSportsDB los resuelvan. La
@@ -110,6 +110,19 @@ def _coincide(nombre_hoja, nombre_espn):
     return bool(a and b and (a == b or a in b or b in a or SequenceMatcher(None, a, b).ratio() >= 0.82))
 
 
+def _tipo_pronostico(favorito_hoja):
+    """La hoja marca la doble oportunidad con el prefijo 'DC' (ej. 'DC
+    LOCAL', 'DC VISITANTE'). El lado (local/visitante) que va dentro de
+    ese texto ya viene decidido por quien llena la hoja -- es el lado
+    de la doble oportunidad que consideraron mas probable (ej. 'DC
+    LOCAL' = local o empate). _lado_favorito() ya lo detecta bien
+    porque compara por palabra, no por texto exacto -- aqui solo se
+    distingue si es 'directo' o 'doble_oportunidad' para poder avisarlo
+    al inicio de cada mensaje."""
+    palabras = set(normalizar(favorito_hoja).split())
+    return "doble_oportunidad" if "dc" in palabras else "favorito_directo"
+
+
 def _lado_favorito(favorito_hoja, local, visitante):
     favorito = normalizar(favorito_hoja)
     palabras = set(favorito.split())
@@ -157,7 +170,7 @@ def _buscar_fixture(entrada, fixtures):
     return fixture
 
 
-def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja):
+def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas=0):
     local, visitante = fixture["teams"]["home"], fixture["teams"]["away"]
     lado = _lado_favorito(favorito_hoja, local["name"], visitante["name"])
     if lado is None:
@@ -167,6 +180,7 @@ def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja):
     return {
         "partido": f"{local['name']} vs {visitante['name']}", "local": local["name"], "visitante": visitante["name"],
         "favorito": favorito, "no_favorito": no_favorito, "favorito_es_local": lado == "local",
+        "tipo_pronostico": _tipo_pronostico(favorito_hoja), "confianza_estrellas": confianza_estrellas,
         "fuente_favorito": "Google Sheets", "fila_fuente": fila_hoja,
         "hora_inicio": fixture["fixture"]["date"], "fixture_id": fixture["fixture"]["id"], "liga_slug": fixture.get("_liga_slug"),
         "home_id": local["id"], "away_id": visitante["id"], "kickoff_utc": fixture["fixture"]["date"],
@@ -194,7 +208,7 @@ def seleccionar():
             print(f"[AVISO] Fila {entrada['fila_hoja']}: no se encontró en ESPN: {entrada['local']} vs {entrada['visitante']}")
             _registrar_pendiente(entrada, "no_encontrado_en_espn", hoy)
             continue
-        partido = _partido_para_vigilar(fixture, entrada["favorito"], entrada["fila_hoja"])
+        partido = _partido_para_vigilar(fixture, entrada["favorito"], entrada["fila_hoja"], entrada.get("confianza_estrellas", 0))
         if partido is None:
             favorito_invalido += 1
             print(f"[AVISO] Fila {entrada['fila_hoja']}: favorito inválido: {entrada['favorito']}")

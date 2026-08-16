@@ -43,6 +43,15 @@ DOMINANCIA_CIERRE = 0.75
 
 MINUTO_MINIMO_ALERTA_MOMENTUM = 15
 
+# Emoji al inicio de cada mensaje segun el TIPO de pronostico (a pedido
+# explicito, agosto 2026) -- distinto de la corona junto al nombre del
+# equipo, que indica A QUIEN favorece.
+EMOJI_TIPO_PRONOSTICO = {
+    "favorito_directo": "\U0001F3AF",   # 🎯
+    "doble_oportunidad": "\U0001F500",  # 🔀
+}
+CORONA_FAVORITO = "\U0001F451"  # 👑
+
 # =====================================================================
 # SISTEMA DE DOS CAPAS (rediseno a pedido explicito, agosto 2026)
 # -----------------------------------------------------------------
@@ -278,27 +287,47 @@ def _mensaje_partido(partido, minuto, snap_actual, texto, mom_favorito=None, pro
     de verdad hay ataque real o paridad. Ahora trae TODOS los numeros
     crudos que ya usa el calculo de momentum (no solo la conclusion),
     para que el criterio final sea del usuario, no solo del sistema.
+
+    CORREGIDO (agosto 2026, a pedido explicito): antes esta funcion
+    armaba el titulo con local/visitante (orden fijo) pero la fila de
+    "favorito vs no_favorito" y TODAS las estadisticas con
+    favorito/no_favorito (orden que cambia segun quien sea el
+    favorito) -- si el visitante era el favorito, las estadisticas
+    salian en orden inverso al titulo, y no habia forma de saber de
+    quien era cada numero sin adivinar. Ahora TODO el mensaje respeta
+    siempre el orden local -> visitante, sin excepcion; el favorito se
+    marca unicamente con la corona junto a su nombre, nunca reordenando
+    quien va primero.
     """
     fav_local = partido["favorito_es_local"]
-    stats_fav = snap_actual["stats_local"] if fav_local else snap_actual["stats_visitante"]
-    stats_riv = snap_actual["stats_visitante"] if fav_local else snap_actual["stats_local"]
+    corona_local = f" {CORONA_FAVORITO}" if fav_local else ""
+    corona_visitante = f" {CORONA_FAVORITO}" if not fav_local else ""
+    emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(partido.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
+
+    stats_local = snap_actual["stats_local"]
+    stats_visitante = snap_actual["stats_visitante"]
 
     def _n(stats, campo):
         return stats.get(campo, "?")
 
+    titulo = (
+        f"<b>{escapar_html(partido['local'])}{corona_local}</b> vs "
+        f"<b>{escapar_html(partido['visitante'])}{corona_visitante}</b>"
+    )
+
     lineas = [
         texto,
-        f"<b>{escapar_html(partido['partido'])}</b> -- min {minuto}",
+        f"{emoji_tipo} {titulo} -- min {minuto}",
         f"Marcador: {snap_actual['goles_local']}-{snap_actual['goles_visitante']}",
         f"Favorito: {escapar_html(partido['favorito'])} (Google Sheets)",
         "",
-        f"\u2B50 <b>{escapar_html(partido['favorito'])}</b> vs <b>{escapar_html(partido['no_favorito'])}</b>",
-        f"Tiros totales: {_n(stats_fav,'totalShots')} vs {_n(stats_riv,'totalShots')}",
-        f"Tiros a puerta: {_n(stats_fav,'shotsOnTarget')} vs {_n(stats_riv,'shotsOnTarget')}",
-        f"Tiros bloqueados: {_n(stats_fav,'blockedShots')} vs {_n(stats_riv,'blockedShots')}",
-        f"Corners: {_n(stats_fav,'wonCorners')} vs {_n(stats_riv,'wonCorners')}",
-        f"Faltas: {_n(stats_fav,'foulsCommitted')} vs {_n(stats_riv,'foulsCommitted')}",
-        f"Posesion: {_n(stats_fav,'possessionPct')}% vs {_n(stats_riv,'possessionPct')}%",
+        "\U0001F4CA <i>Estadisticas (siempre Local vs Visitante):</i>",
+        f"Tiros totales: {_n(stats_local,'totalShots')} vs {_n(stats_visitante,'totalShots')}",
+        f"Tiros a puerta: {_n(stats_local,'shotsOnTarget')} vs {_n(stats_visitante,'shotsOnTarget')}",
+        f"Tiros bloqueados: {_n(stats_local,'blockedShots')} vs {_n(stats_visitante,'blockedShots')}",
+        f"Corners: {_n(stats_local,'wonCorners')} vs {_n(stats_visitante,'wonCorners')}",
+        f"Faltas: {_n(stats_local,'foulsCommitted')} vs {_n(stats_visitante,'foulsCommitted')}",
+        f"Posesion: {_n(stats_local,'possessionPct')}% vs {_n(stats_visitante,'possessionPct')}%",
     ]
 
     if mom_favorito is not None:
