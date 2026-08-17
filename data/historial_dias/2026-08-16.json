@@ -1,6 +1,5 @@
 {
   "fecha": "2026-08-16",
-  "seleccion_version": 5,
   "partidos": [
     {
       "partido": "ADO Den Haag vs FC Groningen",
@@ -37630,5 +37629,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 60
 }
