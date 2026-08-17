@@ -1,11 +1,20 @@
 name: Fase 1 - Seleccion de partidos
 
-# Local (UTC-5): reintenta cada 5 min entre las 04:00 y las 06:00.
+# Local (UTC-5):
+#   - Reintenta cada 5 min entre las 04:00 y las 06:00 (seleccion original del dia).
+#   - NUEVO (agosto 2026, a pedido explicito): segunda revision, cada 5 min
+#     entre las 19:00 y las 19:55, por si se subieron cambios a la hoja
+#     durante el dia. Corre con --forzar -- ignora la autoproteccion de
+#     "ya completado" (ya_se_completo_hoy) y FUSIONA los partidos nuevos
+#     sin perder el historial de seguimiento en vivo de los que ya estaban
+#     seleccionados desde la manana (ver seleccionar_partidos.py).
 # seleccionar_partidos.py ya se autoprotege (ya_se_completo_hoy) --
-# correr de mas no rompe nada, solo no hace nada si ya se completo hoy.
+# correr de mas no rompe nada, solo no hace nada si ya se completo hoy
+# (salvo en la corrida de la noche, que fuerza a proposito).
 on:
   schedule:
-    - cron: "*/5 9-10 * * *"   # 09:00-10:59 UTC = 04:00-05:59 local
+    - cron: "*/5 9-10 * * *"   # 09:00-10:59 UTC = 04:00-05:59 local (seleccion de la manana)
+    - cron: "*/5 0 * * *"      # 00:00-00:55 UTC = 19:00-19:55 local (revision de la noche, forzada)
   workflow_dispatch: {}
 
 permissions:
@@ -27,7 +36,13 @@ jobs:
       - name: Ejecutar seleccion de partidos
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python seleccionar_partidos.py
+        run: |
+          if [ "${{ github.event.schedule }}" = "*/5 0 * * *" ]; then
+            echo "Revision de la noche (19:00 local) -- se fuerza y se fusiona con lo ya seleccionado."
+            python seleccionar_partidos.py --forzar
+          else
+            python seleccionar_partidos.py
+          fi
 
       - name: Guardar cambios en data/
         run: |

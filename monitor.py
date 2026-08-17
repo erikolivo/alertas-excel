@@ -39,40 +39,32 @@ ARCHIVO_PARTIDOS = DATA_DIR / "partidos_hoy.json"
 
 DIFERENCIA_TECHO = 3
 MINUTO_INICIO_CIERRE = 75
-DOMINANCIA_CIERRE = 0.75
 
 MINUTO_MINIMO_ALERTA_MOMENTUM = 15
 
+# Emoji al inicio de cada mensaje segun el TIPO de pronostico (a pedido
+# explicito, agosto 2026) -- distinto de la corona junto al nombre del
+# equipo, que indica A QUIEN favorece.
+EMOJI_TIPO_PRONOSTICO = {
+    "favorito_directo": "\U0001F3AF",   # 🎯
+    "doble_oportunidad": "\U0001F500",  # 🔀
+}
+CORONA_FAVORITO = "\U0001F451"  # 👑
+
 # =====================================================================
-# SISTEMA DE DOS CAPAS (rediseno a pedido explicito, agosto 2026)
-# -----------------------------------------------------------------
-# Capa 1 (SOSTENIDO, ventana ~20 min): la base real de la alerta -- si
-# por si sola cruza el umbral, dispara. Mide si el favorito viene
-# llevando la iniciativa de forma consistente, no solo en un momento.
-#
-# Capa 2 (RECIENTE, ventana ~5 min, la revision inmediata anterior):
-# actua SOLO como un "plus" -- si la intensidad reciente cruza su
-# propio umbral duro, se suma un bono al resultado de la Capa 1. NUNCA
-# puede disparar una alerta por si sola ni cargar la mayor parte del
-# puntaje -- es un empujon sobre una base que ya viene bien encaminada.
-#
-# PISO MINIMO DE VOLUMEN: si en la ventana sostenida hubo muy pocas
-# jugadas en total (entre ambos equipos), el porcentaje no se evalua --
-# evita que 1 tiro suelto sin respuesta del rival dispare una alerta
-# solo por tener un denominador chico.
+# NUEVO SISTEMA (agosto 2026, a pedido explicito) -- reemplaza el
+# anterior de 2 capas (ventana sostenida + bono de ventana reciente)
+# por decaimiento exponencial + z-score de confianza estadistica (ver
+# momentum.py). En vez de ventanas fijas y un piso de volumen
+# inventado a mano, cada evento pesa menos mientras mas viejo es, y el
+# umbral de disparo es "que tan lejos esta del 50/50, en desviaciones
+# estandar" -- eso ya incorpora el problema del volumen de forma
+# matematica, sin necesitar un piso aparte.
 # =====================================================================
 
-UMBRAL_DOMINANCIA_GENERAL = 0.70
-UMBRAL_INTENSIDAD_RECIENTE = 0.80
-BONO_INTENSIDAD_RECIENTE = 0.10
-VENTANA_SOSTENIDO_MINUTOS = 20
-VOLUMEN_MINIMO_VENTANA = 6.0   # equivalente aprox. a 2 tiros a puerta combinados
-
-# Alerta de primer tiempo: mismo mecanismo, pero mas permisiva a
-# proposito -- cubre "algo se esta cocinando antes del descanso", no
-# "dominancia abrumadora ya confirmada".
-UMBRAL_DOMINANCIA_1ER_TIEMPO = 0.60
-BONO_1ER_TIEMPO = 0.05
+UMBRAL_Z_ALERTA = momentum.UMBRAL_Z_CONFIANZA_MEDIA    # ~90% de confianza
+UMBRAL_Z_CIERRE = momentum.UMBRAL_Z_CONFIANZA_ALTA      # ~95% de confianza, para "gol de cierre"
+UMBRAL_Z_1ER_TIEMPO = 1.28                              # ~80%, mas permisivo a proposito
 MINUTO_INICIO_1ER_TIEMPO = 25
 MINUTO_FIN_1ER_TIEMPO = 40
 
@@ -116,106 +108,60 @@ def _ya_se_envio_reciente(partido, tipo, minuto_actual, ventana=10):
     return False
 
 
-def _snapshot_referencia(historial, minuto_actual_int, minutos_atras):
-    """Busca el snapshot mas cercano a 'minutos_atras' antes del minuto
-    actual, dentro del historial ya guardado. Si el partido no lleva
-    tanto tiempo (o hubo huecos), usa el snapshot mas antiguo disponible
-    como mejor esfuerzo -- eso naturalmente da menos volumen acumulado,
-    y el piso minimo de volumen se encarga de filtrar esos casos."""
-    if not historial:
-        return None
-    objetivo = minuto_actual_int - minutos_atras
-    referencia = None
-    for s in historial:
-        m = momentum._minuto_a_entero(s.get("minuto"))
-        if m is None:
-            continue
-        if m <= objetivo:
-            referencia = s
-    if referencia is None:
-        referencia = historial[0]
-    return referencia
-
-
-def _dominancia(snap_actual, snap_referencia, lado_favorito, lado_rival):
-    """Proporcion de presion que le corresponde al favorito entre
-    snap_referencia y snap_actual, mas el volumen total combinado
-    (para el piso minimo)."""
-    presion_fav, _ = momentum.calcular_presion(snap_actual, snap_referencia, lado_favorito)
-    presion_riv, _ = momentum.calcular_presion(snap_actual, snap_referencia, lado_rival)
-    proporcion = momentum.momentum_relativo(presion_fav, presion_riv)
-    volumen = presion_fav + presion_riv
-    return proporcion, volumen
+def _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival):
+    """Calcula, para el favorito y el rival, la presion ponderada por
+    tiempo (decide quien domina) y el conteo de eventos ponderado por
+    tiempo (decide que tan confiable es esa lectura). Ver momentum.py."""
+    presion_fav = momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_favorito)
+    presion_riv = momentum.presion_ponderada_por_tiempo(historial, minuto_int, lado_rival)
+    n_fav = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_favorito)
+    n_riv = momentum.eventos_ponderados_por_tiempo(historial, minuto_int, lado_rival)
+    return presion_fav, presion_riv, n_fav, n_riv
 
 
 def _evaluar_dominancia_general(partido, minuto_int):
+    """Devuelve (lado_ganador, dominancia_%, z) si algun lado supera el
+    umbral de confianza, o None. lado_ganador es 'favorito' o 'rival'."""
     lado_favorito = "local" if partido["favorito_es_local"] else "visitante"
     lado_rival = "visitante" if partido["favorito_es_local"] else "local"
     historial = partido.get("historial_snapshots", [])
-    snap_actual = historial[-1]
 
-    snap_sostenido = _snapshot_referencia(historial, minuto_int, VENTANA_SOSTENIDO_MINUTOS)
-    prop_sostenido, volumen = _dominancia(snap_actual, snap_sostenido, lado_favorito, lado_rival)
-    if volumen < VOLUMEN_MINIMO_VENTANA:
-        return None  # sin evidencia suficiente todavia -- no se evalua
+    presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
+    z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
-    snap_reciente = historial[-2] if len(historial) >= 2 else None
-    prop_reciente, _ = _dominancia(snap_actual, snap_reciente, lado_favorito, lado_rival)
-
-    # Lado favorito
-    score_fav = prop_sostenido
-    if prop_reciente >= UMBRAL_INTENSIDAD_RECIENTE:
-        score_fav += BONO_INTENSIDAD_RECIENTE
-    if score_fav >= UMBRAL_DOMINANCIA_GENERAL:
-        return "favorito", min(1.0, score_fav)
-
-    # Lado rival (mismo estandar, simetrico)
-    prop_sostenido_riv = 1 - prop_sostenido
-    prop_reciente_riv = 1 - prop_reciente
-    score_riv = prop_sostenido_riv
-    if prop_reciente_riv >= UMBRAL_INTENSIDAD_RECIENTE:
-        score_riv += BONO_INTENSIDAD_RECIENTE
-    if score_riv >= UMBRAL_DOMINANCIA_GENERAL:
-        return "rival", min(1.0, score_riv)
-
+    if z >= UMBRAL_Z_ALERTA:
+        return "favorito", dominancia_fav, z
+    if -z >= UMBRAL_Z_ALERTA:
+        return "rival", 1 - dominancia_fav, -z
     return None
 
 
 def _evaluar_dominancia_1er_tiempo(partido, minuto_int):
-    """Mismo mecanismo de 2 capas que la general, pero mas permisiva
-    (umbral 60% en vez de 70%, bono de solo +5% en vez de +10%) -- a
-    proposito, para capturar 'algo se esta cocinando antes del
-    descanso', no dominancia ya confirmada. Solo mira al favorito."""
+    """Mismo mecanismo que la general, pero con un umbral de confianza
+    mas bajo (~80% en vez de ~90%) a proposito -- cubre 'algo se esta
+    cocinando antes del descanso', no dominancia ya confirmada. Solo
+    mira al favorito."""
     lado_favorito = "local" if partido["favorito_es_local"] else "visitante"
     lado_rival = "visitante" if partido["favorito_es_local"] else "local"
     historial = partido.get("historial_snapshots", [])
-    snap_actual = historial[-1]
 
-    snap_sostenido = _snapshot_referencia(historial, minuto_int, VENTANA_SOSTENIDO_MINUTOS)
-    prop_sostenido, volumen = _dominancia(snap_actual, snap_sostenido, lado_favorito, lado_rival)
-    if volumen < VOLUMEN_MINIMO_VENTANA:
-        return None
+    presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, minuto_int, lado_favorito, lado_rival)
+    z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
-    snap_reciente = historial[-2] if len(historial) >= 2 else None
-    prop_reciente, _ = _dominancia(snap_actual, snap_reciente, lado_favorito, lado_rival)
-
-    score = prop_sostenido
-    if prop_reciente >= UMBRAL_INTENSIDAD_RECIENTE:
-        score += BONO_1ER_TIEMPO
-
-    if score >= UMBRAL_DOMINANCIA_1ER_TIEMPO:
-        return min(1.0, score)
+    if z >= UMBRAL_Z_1ER_TIEMPO:
+        return dominancia_fav, z
     return None
 
 
-def _texto_alerta_favorito(diferencia, minuto_int, score):
-    if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and score >= DOMINANCIA_CIERRE:
-        return "gol_de_cierre", f"\u23F0 Posible gol de cierre -- dominancia acumulada alta ({round(score*100)}%) en el tramo final."
+def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z):
+    conf = momentum.etiqueta_confianza(z)
+    if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
+        return "gol_de_cierre", f"\u23F0 Posible gol de cierre -- dominancia alta ({round(dominancia_pct*100)}%, confianza {conf}) en el tramo final."
     if diferencia < 0:
-        return "posible_empate", f"\U0001F7E0 Posible empate -- el favorito domina ({round(score*100)}%)."
+        return "posible_empate", f"\U0001F7E0 Posible empate -- el favorito domina ({round(dominancia_pct*100)}%, confianza {conf})."
     if diferencia == 0:
-        return "posible_victoria_favorito", f"\U0001F7E2 Posible victoria del favorito -- domina claramente ({round(score*100)}%)."
-    return "ampliacion_marcador", f"\U0001F535 Posible ampliacion de marcador -- sigue dominando ({round(score*100)}%)."
+        return "posible_victoria_favorito", f"\U0001F7E2 Posible victoria del favorito -- domina claramente ({round(dominancia_pct*100)}%, confianza {conf})."
+    return "ampliacion_marcador", f"\U0001F535 Posible ampliacion de marcador -- sigue dominando ({round(dominancia_pct*100)}%, confianza {conf})."
 
 
 def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
@@ -235,15 +181,23 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             return [("partido_resuelto", "\U0001F3C1 Seguimiento cerrado -- diferencia de 3+ goles.")]
         return []
 
-    if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_rival) or \
-       momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_favorito):
+    if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_rival):
         if not _ya_se_envio_reciente(partido, "tarjeta_roja", minuto, ventana=999):
-            return [("tarjeta_roja", "\U0001F7E5 Tarjeta roja detectada.")]
+            equipo = partido['visitante'] if lado_rival == "visitante" else partido['local']
+            return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
+    if momentum.hubo_tarjeta_roja(snap_actual, snap_anterior, lado_favorito):
+        if not _ya_se_envio_reciente(partido, "tarjeta_roja", minuto, ventana=999):
+            equipo = partido['local'] if lado_favorito == "local" else partido['visitante']
+            return [("tarjeta_roja", f"\U0001F7E5 Tarjeta roja para {equipo}.")]
 
-    if momentum.hubo_penal(snap_actual, snap_anterior, lado_favorito) or \
-       momentum.hubo_penal(snap_actual, snap_anterior, lado_rival):
+    if momentum.hubo_penal(snap_actual, snap_anterior, lado_favorito):
         if not _ya_se_envio_reciente(partido, "penal", minuto, ventana=15):
-            return [("penal", "\U0001F3AF Penal detectado.")]
+            equipo = partido['local'] if lado_favorito == "local" else partido['visitante']
+            return [("penal", f"\U0001F3AF Penal para {equipo}.")]
+    if momentum.hubo_penal(snap_actual, snap_anterior, lado_rival):
+        if not _ya_se_envio_reciente(partido, "penal", minuto, ventana=15):
+            equipo = partido['visitante'] if lado_rival == "visitante" else partido['local']
+            return [("penal", f"\U0001F3AF Penal para {equipo}.")]
 
     minuto_int = momentum._minuto_a_entero(minuto) or 45
     if minuto_int < MINUTO_MINIMO_ALERTA_MOMENTUM:
@@ -256,56 +210,101 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
             return [("alerta_1er_tiempo",
                       f"\u23F1\uFE0F Alerta de primer tiempo -- el favorito domina el 0-0 ({round(score_1t*100)}%).")]
 
-    # --- Dominancia general (dos capas), favorito o rival ---
+    # --- Dominancia general (decaimiento exponencial + z-score), favorito o rival ---
     resultado = _evaluar_dominancia_general(partido, minuto_int)
     if resultado:
-        lado_resultado, score = resultado
+        lado_resultado, dominancia_pct, z = resultado
         if lado_resultado == "favorito":
-            tipo, texto = _texto_alerta_favorito(diferencia, minuto_int, score)
+            tipo, texto = _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z)
         else:
             tipo = "cuidado_rival_presiona"
-            texto = f"\u26A0\uFE0F Cuidado -- el rival esta dominando ({round(score*100)}%)."
+            conf = momentum.etiqueta_confianza(z)
+            texto = f"\u26A0\uFE0F Cuidado -- el rival esta dominando ({round(dominancia_pct*100)}%, confianza {conf})."
         if tipo and not _ya_se_envio_reciente(partido, tipo, minuto_int):
             return [(tipo, texto)]
 
     return []
 
 
-def _mensaje_partido(partido, minuto, snap_actual, texto, mom_favorito=None, prob_gol_fav=None, prob_gol_riv=None):
+def _mensaje_partido(partido, minuto, snap_actual, texto, dominancia_fav=None, z=None):
     """
     AMPLIADO a pedido explicito: antes solo mostraba tiros a puerta y
     posesion -- insuficiente para que la persona juzgue por si misma si
     de verdad hay ataque real o paridad. Ahora trae TODOS los numeros
     crudos que ya usa el calculo de momentum (no solo la conclusion),
     para que el criterio final sea del usuario, no solo del sistema.
+
+    CORREGIDO (agosto 2026, a pedido explicito): antes esta funcion
+    armaba el titulo con local/visitante (orden fijo) pero la fila de
+    "favorito vs no_favorito" y TODAS las estadisticas con
+    favorito/no_favorito (orden que cambia segun quien sea el
+    favorito) -- si el visitante era el favorito, las estadisticas
+    salian en orden inverso al titulo, y no habia forma de saber de
+    quien era cada numero sin adivinar. Ahora TODO el mensaje respeta
+    siempre el orden local -> visitante, sin excepcion; el favorito se
+    marca unicamente con la corona junto a su nombre, nunca reordenando
+    quien va primero.
+
+    AJUSTADO de nuevo (agosto 2026, a pedido explicito):
+      - Se quita "(Google Sheets)" de la linea de favorito -- no aporta nada.
+      - Se agrega la cuota inicial del partido (si se guardo al seleccionarlo).
+      - Se reemplaza "Momentum/Prob. de gol" por la nueva metrica de
+        dominancia ponderada por decaimiento exponencial + z-score de
+        confianza estadistica (ver momentum.py) -- las estadisticas
+        acumuladas del partido completo se SIGUEN mostrando igual que
+        antes, esta es una linea ADICIONAL, no un reemplazo.
     """
     fav_local = partido["favorito_es_local"]
-    stats_fav = snap_actual["stats_local"] if fav_local else snap_actual["stats_visitante"]
-    stats_riv = snap_actual["stats_visitante"] if fav_local else snap_actual["stats_local"]
+    corona_local = f" {CORONA_FAVORITO}" if fav_local else ""
+    corona_visitante = f" {CORONA_FAVORITO}" if not fav_local else ""
+    emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(partido.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
+
+    stats_local = snap_actual["stats_local"]
+    stats_visitante = snap_actual["stats_visitante"]
 
     def _n(stats, campo):
         return stats.get(campo, "?")
 
+    titulo = (
+        f"<b>{escapar_html(partido['local'])}{corona_local}</b> vs "
+        f"<b>{escapar_html(partido['visitante'])}{corona_visitante}</b>"
+    )
+
     lineas = [
         texto,
-        f"<b>{escapar_html(partido['partido'])}</b> -- min {minuto}",
+        f"{emoji_tipo} {titulo} -- min {minuto}",
         f"Marcador: {snap_actual['goles_local']}-{snap_actual['goles_visitante']}",
-        f"Favorito: {escapar_html(partido['favorito'])} (Google Sheets)",
-        "",
-        f"\u2B50 <b>{escapar_html(partido['favorito'])}</b> vs <b>{escapar_html(partido['no_favorito'])}</b>",
-        f"Tiros totales: {_n(stats_fav,'totalShots')} vs {_n(stats_riv,'totalShots')}",
-        f"Tiros a puerta: {_n(stats_fav,'shotsOnTarget')} vs {_n(stats_riv,'shotsOnTarget')}",
-        f"Tiros bloqueados: {_n(stats_fav,'blockedShots')} vs {_n(stats_riv,'blockedShots')}",
-        f"Corners: {_n(stats_fav,'wonCorners')} vs {_n(stats_riv,'wonCorners')}",
-        f"Faltas: {_n(stats_fav,'foulsCommitted')} vs {_n(stats_riv,'foulsCommitted')}",
-        f"Posesion: {_n(stats_fav,'possessionPct')}% vs {_n(stats_riv,'possessionPct')}%",
+        f"Favorito: {escapar_html(partido['favorito'])}",
     ]
 
-    if mom_favorito is not None:
+    cuota_l = partido.get("cuota_local_inicial")
+    cuota_x = partido.get("cuota_empate_inicial")
+    cuota_v = partido.get("cuota_visitante_inicial")
+    if cuota_l or cuota_v:
+        partes_cuota = [f"{escapar_html(partido['local'])} {cuota_l}" if cuota_l else None,
+                         f"Empate {cuota_x}" if cuota_x else None,
+                         f"{escapar_html(partido['visitante'])} {cuota_v}" if cuota_v else None]
+        lineas.append("Cuota inicial: " + " | ".join(p for p in partes_cuota if p))
+
+    lineas += [
+        "",
+        "\U0001F4CA <i>Estadisticas acumuladas del partido (siempre Local vs Visitante):</i>",
+        f"Tiros totales: {_n(stats_local,'totalShots')} vs {_n(stats_visitante,'totalShots')}",
+        f"Tiros a puerta: {_n(stats_local,'shotsOnTarget')} vs {_n(stats_visitante,'shotsOnTarget')}",
+        f"Tiros bloqueados: {_n(stats_local,'blockedShots')} vs {_n(stats_visitante,'blockedShots')}",
+        f"Corners: {_n(stats_local,'wonCorners')} vs {_n(stats_visitante,'wonCorners')}",
+        f"Faltas: {_n(stats_local,'foulsCommitted')} vs {_n(stats_visitante,'foulsCommitted')}",
+        f"Posesion: {_n(stats_local,'possessionPct')}% vs {_n(stats_visitante,'possessionPct')}%",
+    ]
+
+    if dominancia_fav is not None and z is not None:
+        conf = momentum.etiqueta_confianza(z)
+        lado_domina = partido['favorito'] if z >= 0 else partido['no_favorito']
+        dominancia_mostrada = dominancia_fav if z >= 0 else (1 - dominancia_fav)
         lineas.append("")
-        lineas.append(f"Momentum (presion reciente): {round(mom_favorito*100)}% favorito / {round((1-mom_favorito)*100)}% rival")
-    if prob_gol_fav is not None and prob_gol_riv is not None:
-        lineas.append(f"Prob. de gol en los proximos ~15 min: favorito {round(prob_gol_fav*100)}% / rival {round(prob_gol_riv*100)}%")
+        lineas.append(f"\U0001F4C8 Dominancia ponderada (mas peso a lo reciente): "
+                       f"{round(dominancia_mostrada*100)}% a favor de {escapar_html(lado_domina)}")
+        lineas.append(f"Confianza estadistica: {conf} (z={z:.2f})")
 
     return "\n".join(lineas)
 
@@ -346,15 +345,12 @@ def vigilar():
         if alertas:
             lado_favorito = "local" if partido["favorito_es_local"] else "visitante"
             lado_rival = "visitante" if partido["favorito_es_local"] else "local"
-            presion_fav, _ = momentum.calcular_presion(snap_actual, snap_anterior, lado_favorito)
-            presion_riv, _ = momentum.calcular_presion(snap_actual, snap_anterior, lado_rival)
-            mom_favorito = momentum.momentum_relativo(presion_fav, presion_riv)
-            prob_gol_fav = momentum.probabilidad_gol_ventana(snap_actual, snap_anterior, lado_favorito, box["minuto"])
-            prob_gol_riv = momentum.probabilidad_gol_ventana(snap_actual, snap_anterior, lado_rival, box["minuto"])
+            presion_fav, presion_riv, n_fav, n_riv = _presiones_y_eventos(historial, box["minuto"], lado_favorito, lado_rival)
+            z, dominancia_fav = momentum.z_score_dominancia(presion_fav, presion_riv, n_fav, n_riv)
 
         for tipo, texto in alertas:
             mensaje = _mensaje_partido(partido, box["minuto"], snap_actual, texto,
-                                        mom_favorito=mom_favorito, prob_gol_fav=prob_gol_fav, prob_gol_riv=prob_gol_riv)
+                                        dominancia_fav=dominancia_fav, z=z)
             if enviar_mensaje_telegram(mensaje):
                 _registrar_alerta(partido, tipo, texto, box["minuto"])
 

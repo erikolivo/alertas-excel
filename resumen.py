@@ -20,6 +20,13 @@ from estado_diario import ya_se_hizo, marcar_hecho
 ARCHIVO = Path(__file__).parent / "data" / "partidos_hoy.json"
 ZONA_HORARIA_LOCAL = datetime.timezone(datetime.timedelta(hours=-5))
 
+# Mismo esquema de emojis que monitor.py (Fase 3), a pedido explicito.
+EMOJI_TIPO_PRONOSTICO = {
+    "favorito_directo": "\U0001F3AF",   # 🎯
+    "doble_oportunidad": "\U0001F500",  # 🔀
+}
+CORONA_FAVORITO = "\U0001F451"  # 👑
+
 
 def _hora_local(hora_inicio_utc_iso):
     if not hora_inicio_utc_iso:
@@ -58,10 +65,14 @@ def enviar_resumen():
     for p in partidos:
         hora = _hora_local(p.get("hora_inicio"))
         estado = "\u2705" if p["fixture_id"] else "\u26A0\uFE0F sin vigilancia en vivo"
+        emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(p.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
+        corona_local = f" {CORONA_FAVORITO}" if p.get("favorito_es_local") else ""
+        corona_visitante = f" {CORONA_FAVORITO}" if not p.get("favorito_es_local") else ""
+        titulo = f"{escapar_html(p['local'])}{corona_local} vs {escapar_html(p['visitante'])}{corona_visitante}"
         lineas.append(
-            f"\n\u2B50 {hora} -- {escapar_html(p['partido'])} {estado}"
+            f"\n{emoji_tipo} {hora} -- {titulo} {estado}"
         )
-        lineas.append(f"Favorito de la hoja: <b>{escapar_html(p['favorito'])}</b>")
+        lineas.append(f"Favorito: <b>{escapar_html(p['favorito'])}</b>")
 
     exito = enviar_mensaje_telegram("\n".join(lineas))
     if exito:
