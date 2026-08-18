@@ -1,27 +1,6 @@
 [
   {
     "fecha": "2026-08-16",
-    "local": "Piteå",
-    "visitante": "Vasalund",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Stockholm Internazionale",
-    "visitante": "Arlanda",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FBK Karlstad",
-    "visitante": "Enköping",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
     "local": "Trelleborg",
     "visitante": "Eskilsminne",
     "favorito": "LOCAL",
@@ -1397,6 +1376,27 @@
     "local": "Al Ain U23",
     "visitante": "Bani Yas U23",
     "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "AD Cofutpa",
+    "visitante": "ADR Jicaral",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Platense",
+    "visitante": "FAS",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "UNAN Managua",
+    "visitante": "Jalapa",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
 ]
