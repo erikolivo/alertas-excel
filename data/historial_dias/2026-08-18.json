@@ -1,6 +1,5 @@
 {
   "fecha": "2026-08-18",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Shanghai Shenhua vs Beijing Guoan",
@@ -14897,5 +14896,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 19
 }
