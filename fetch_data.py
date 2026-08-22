@@ -139,6 +139,41 @@ LIGAS_ESPN = {
     "conmebol.sudamericana": ("World", "CONMEBOL Sudamericana"),
     "uefa.champions": ("World", "UEFA Champions League"),
     "uefa.europa": ("World", "UEFA Europa League"),
+
+    # AGREGADO agosto 2026, a pedido explicito -- candidatos NO
+    # VERIFICADOS uno por uno, agregados a partir de un log real donde
+    # estos paises aparecieron sin cobertura (ver conversacion del
+    # 22-ago-2026). Siguen el patron estandar de ESPN
+    # (pais.numero_de_division). Si alguno falla, el log lo dice
+    # explicitamente -- se corrige ese slug puntual sin tocar el resto.
+    "arm.1": ("Armenia", "Premier League"),
+    "aze.1": ("Azerbaijan", "Premyer Liqasi"),
+    "bul.1": ("Bulgaria", "First League"),
+    "fin.1": ("Finland", "Veikkausliiga"),
+    "geo.1": ("Georgia", "Erovnuli Liga"),
+    "hun.1": ("Hungary", "NB I"),
+    "isl.1": ("Iceland", "Besta deild karla"),
+    "ltu.1": ("Lithuania", "A Lyga"),
+    "mlt.1": ("Malta", "Premier League"),
+    "mne.1": ("Montenegro", "First League"),
+    "rou.1": ("Romania", "Liga I"),
+    "srb.1": ("Serbia", "Super Liga"),
+    "ukr.1": ("Ukraine", "Premier League"),
+    "fai.1": ("Faroe Islands", "Betri deildin"),
+    "isr.1": ("Israel", "Ligat Ha'Al"),
+    "kwt.1": ("Kuwait", "Premier League"),
+    "lva.1": ("Latvia", "Virsliga"),
+    "par.1": ("Paraguay", "Primera Division"),
+    "per.1": ("Peru", "Liga 1"),
+    "pol.1": ("Poland", "Ekstraklasa"),
+    "por.2": ("Portugal", "Liga Portugal 2"),
+    "rus.1": ("Russia", "Premier League"),
+    "ksa.1": ("Saudi Arabia", "Pro League"),
+    "tur.2": ("Turkey", "1. Lig"),
+    "gre.2": ("Greece", "Super League 2"),
+    "bel.2": ("Belgium", "Challenger Pro League"),
+    "bra.2": ("Brazil", "Serie B"),
+    "chi.2": ("Chile", "Primera B"),
 }
 
 
@@ -148,21 +183,28 @@ def _fecha_espn(fecha_iso):
 
 def obtener_fixtures_por_fecha(fecha_iso):
     """
-    Devuelve los fixtures de 'fecha_iso' (YYYY-MM-DD) desde el marcador
-    global de ESPN, en la MISMA forma que antes devolvia API-Football
-    (fixture.id, teams.home/away.id/name, league.country/name) para que
+    Devuelve los fixtures de 'fecha_iso' (YYYY-MM-DD) desde ESPN, en la
+    MISMA forma que antes devolvia API-Football (fixture.id,
+    teams.home/away.id/name, league.country/name) para que
     seleccionar_partidos.py no cambie su logica de lectura.
 
     Ademas guarda internamente el bloque de cuotas de DraftKings (si
     vino) y el slug de liga -- ver extraer_favorito_odds_espn() y los
     campos "_liga_slug" / "_odds_raw" de cada fixture.
 
-    Se usa una petición global; si falla, se vuelve a la lista curada
-    LIGAS_ESPN como respaldo.
+    CAMBIO (agosto 2026, a pedido explicito): antes LIGAS_ESPN solo se
+    consultaba como respaldo SI la peticion global (".../all/scoreboard")
+    fallaba por completo. Se confirmo con evidencia real (log de una
+    corrida: "ESPN global: 39 fixtures encontrados" en un dia con 84
+    favoritos en la hoja) que el endpoint global de ESPN NO cubre la
+    mayoria de ligas menores, aunque la peticion en si tenga exito --
+    no es un problema de nombres/alias, el partido simplemente no
+    estaba en la respuesta. Por eso ahora LIGAS_ESPN se consulta
+    SIEMPRE ademas del global, fusionando por fixture_id (sin duplicar)
+    en vez de ser un respaldo de todo o nada.
     """
-    # El marcador global incluye ligas que no están en LIGAS_ESPN
-    # (divisiones inferiores y competiciones regionales). El valor "all"
-    # también sirve para pedir su summary durante la vigilancia en vivo.
+    fixtures_por_id = {}
+
     url_global = f"{BASE_ESPN_SITE}/all/scoreboard?dates={_fecha_espn(fecha_iso)}"
     try:
         r = requests.get(url_global, timeout=TIMEOUT)
@@ -174,7 +216,6 @@ def obtener_fixtures_por_fecha(fecha_iso):
         except Exception:
             pass
 
-        fixtures = []
         for evento in data.get("events", []):
             try:
                 comp = evento["competitions"][0]
@@ -183,7 +224,7 @@ def obtener_fixtures_por_fecha(fecha_iso):
             except (KeyError, IndexError, StopIteration):
                 continue
             liga = evento.get("league", {})
-            fixtures.append({
+            fixtures_por_id[evento["id"]] = {
                 "fixture": {"id": evento["id"], "date": evento["date"]},
                 "teams": {
                     "home": {"id": home["team"]["id"], "name": home["team"]["displayName"]},
@@ -192,13 +233,14 @@ def obtener_fixtures_por_fecha(fecha_iso):
                 "league": {"country": liga.get("country", ""), "name": liga.get("name", "")},
                 "_liga_slug": "all",
                 "_odds_raw": comp.get("odds"),
-            })
-        print(f"ESPN global: {len(fixtures)} fixtures encontrados.")
-        return fixtures
+            }
+        print(f"ESPN global: {len(fixtures_por_id)} fixtures encontrados.")
     except Exception as e:
-        print(f"[AVISO] No se pudo consultar el marcador global de ESPN: {e}. Se usará la lista de respaldo.")
+        print(f"[AVISO] No se pudo consultar el marcador global de ESPN: {e}. Se sigue solo con la lista curada.")
 
-    fixtures = []
+    # SIEMPRE se complementa con LIGAS_ESPN -- el global no cubre todo
+    # (ver docstring), aunque la peticion global haya tenido exito.
+    nuevos_del_respaldo = 0
     for slug, (pais, nombre_liga) in LIGAS_ESPN.items():
         url = f"{BASE_ESPN_SITE}/{slug}/scoreboard?dates={_fecha_espn(fecha_iso)}"
         try:
@@ -216,6 +258,8 @@ def obtener_fixtures_por_fecha(fecha_iso):
             pass
 
         for evento in data.get("events", []):
+            if evento["id"] in fixtures_por_id:
+                continue  # ya vino del global, no se duplica
             try:
                 comp = evento["competitions"][0]
                 home = next(c for c in comp["competitors"] if c["homeAway"] == "home")
@@ -223,7 +267,7 @@ def obtener_fixtures_por_fecha(fecha_iso):
             except (KeyError, IndexError, StopIteration):
                 continue
 
-            fixtures.append({
+            fixtures_por_id[evento["id"]] = {
                 "fixture": {"id": evento["id"], "date": evento["date"]},
                 "teams": {
                     "home": {"id": home["team"]["id"], "name": home["team"]["displayName"]},
@@ -232,10 +276,12 @@ def obtener_fixtures_por_fecha(fecha_iso):
                 "league": {"country": pais, "name": nombre_liga},
                 "_liga_slug": slug,
                 "_odds_raw": comp.get("odds"),
-            })
+            }
+            nuevos_del_respaldo += 1
 
-    print(f"ESPN: {len(fixtures)} fixtures encontrados en {len(LIGAS_ESPN)} ligas consultadas.")
-    return fixtures
+    print(f"ESPN (lista curada, {len(LIGAS_ESPN)} liga(s) consultada(s)): "
+          f"{nuevos_del_respaldo} fixture(s) adicional(es) que el global no traia.")
+    return list(fixtures_por_id.values())
 
 
 def extraer_favorito_odds_espn(fixture):
