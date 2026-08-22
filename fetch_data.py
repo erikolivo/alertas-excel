@@ -140,40 +140,26 @@ LIGAS_ESPN = {
     "uefa.champions": ("World", "UEFA Champions League"),
     "uefa.europa": ("World", "UEFA Europa League"),
 
-    # AGREGADO agosto 2026, a pedido explicito -- candidatos NO
-    # VERIFICADOS uno por uno, agregados a partir de un log real donde
-    # estos paises aparecieron sin cobertura (ver conversacion del
-    # 22-ago-2026). Siguen el patron estandar de ESPN
-    # (pais.numero_de_division). Si alguno falla, el log lo dice
-    # explicitamente -- se corrige ese slug puntual sin tocar el resto.
-    "arm.1": ("Armenia", "Premier League"),
-    "aze.1": ("Azerbaijan", "Premyer Liqasi"),
-    "bul.1": ("Bulgaria", "First League"),
+    # AGREGADO agosto 2026, a pedido explicito -- confirmados con
+    # evidencia real: (1) tabla de slugs verificados de ESPN
+    # (github.com/pseudo-r/Public-ESPN-API) y (2) el log real de una
+    # corrida donde NO dieron error 400 (ver conversacion del
+    # 22-ago-2026). Los que SI daban 400 (Armenia, Azerbaiyan,
+    # Bulgaria, Georgia, Hungria, Islandia, Lituania, Montenegro,
+    # Serbia, Ucrania, Faroe, Kuwait, Letonia, Polonia, Portugal 2,
+    # Grecia 2, Belgica 2) se sacaron -- ESPN simplemente no tiene esas
+    # ligas en este endpoint, no es un problema de nombre de slug.
     "fin.1": ("Finland", "Veikkausliiga"),
-    "geo.1": ("Georgia", "Erovnuli Liga"),
-    "hun.1": ("Hungary", "NB I"),
-    "isl.1": ("Iceland", "Besta deild karla"),
-    "ltu.1": ("Lithuania", "A Lyga"),
     "mlt.1": ("Malta", "Premier League"),
-    "mne.1": ("Montenegro", "First League"),
     "rou.1": ("Romania", "Liga I"),
-    "srb.1": ("Serbia", "Super Liga"),
-    "ukr.1": ("Ukraine", "Premier League"),
-    "fai.1": ("Faroe Islands", "Betri deildin"),
     "isr.1": ("Israel", "Ligat Ha'Al"),
-    "kwt.1": ("Kuwait", "Premier League"),
-    "lva.1": ("Latvia", "Virsliga"),
-    "par.1": ("Paraguay", "Primera Division"),
-    "per.1": ("Peru", "Liga 1"),
-    "pol.1": ("Poland", "Ekstraklasa"),
-    "por.2": ("Portugal", "Liga Portugal 2"),
     "rus.1": ("Russia", "Premier League"),
     "ksa.1": ("Saudi Arabia", "Pro League"),
     "tur.2": ("Turkey", "1. Lig"),
-    "gre.2": ("Greece", "Super League 2"),
-    "bel.2": ("Belgium", "Challenger Pro League"),
     "bra.2": ("Brazil", "Serie B"),
     "chi.2": ("Chile", "Primera B"),
+    "par.1": ("Paraguay", "Primera Division"),
+    "per.1": ("Peru", "Liga 1"),
 }
 
 
