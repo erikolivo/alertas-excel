@@ -1,1401 +1,1401 @@
 [
   {
-    "fecha": "2026-08-16",
-    "local": "Hamburger SV II",
-    "visitante": "SV Drochtersen/Assel",
+    "fecha": "2026-08-18",
+    "local": "Curzon Ashton",
+    "visitante": "Bamber Bridge",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Gainsborough Trinity",
+    "visitante": "Stockton Town",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Guiseley AFC",
+    "visitante": "Bury",
     "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Bremer SV",
-    "visitante": "HSC Hannover",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Altglienicke",
-    "visitante": "Hallescher FC",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Freiburg II",
-    "visitante": "Hessen Kassel",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Deportivo San Pedro",
-    "visitante": "Aurora",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Suchitepéquez",
-    "visitante": "Marquense",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Szentlőrinc SE",
-    "visitante": "Csakvar",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Vasas II",
-    "visitante": "Újpest II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Erbil",
-    "visitante": "Al Kahrabaa",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "St Patrick's Athl.",
-    "visitante": "Shamrock Rovers",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Bohemians",
-    "visitante": "Longford Town",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Ironi Kiryat Shmona",
-    "visitante": "Hapoel Tel Aviv",
+    "fecha": "2026-08-18",
+    "local": "Hyde United",
+    "visitante": "United of Manchester",
     "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Maccabi Netanya",
-    "visitante": "Maccabi Tel Aviv",
+    "fecha": "2026-08-18",
+    "local": "Ilkeston Town",
+    "visitante": "Warrington Town",
     "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Dolomiti Bellunesi",
-    "visitante": "Treviso",
+    "fecha": "2026-08-18",
+    "local": "Leek Town",
+    "visitante": "AFC Emley",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Juventus U23",
-    "visitante": "Forli",
-    "favorito": "DC LOCAL",
+    "fecha": "2026-08-18",
+    "local": "Redcar Athletic",
+    "visitante": "Lancaster City",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Alcione",
-    "visitante": "Novara",
-    "favorito": "DC LOCAL",
+    "fecha": "2026-08-18",
+    "local": "Rylands",
+    "visitante": "Quorn",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Bari",
-    "visitante": "Casarano",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Crotone",
-    "visitante": "Cosenza",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Foggia",
-    "visitante": "Team Altamura",
+    "fecha": "2026-08-18",
+    "local": "Fleetwood Town U21",
+    "visitante": "Preston North End U21",
     "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Giugliano",
-    "visitante": "Sorrento",
+    "fecha": "2026-08-18",
+    "local": "Bristol City U21",
+    "visitante": "Wigan Athletic U21",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Latina",
-    "visitante": "Ostia Mare",
+    "fecha": "2026-08-18",
+    "local": "Peterborough United U21",
+    "visitante": "Queens Park Rangers U21",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Lecco",
-    "visitante": "Desenzano Calvina",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Pescara",
-    "visitante": "Sambenedettese",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Yokohama FC",
-    "visitante": "Jubilo Iwata",
+    "fecha": "2026-08-18",
+    "local": "Cardiff City U21",
+    "visitante": "Barnsley U21",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Tokushima Vortis",
-    "visitante": "Sagan Tosu",
+    "fecha": "2026-08-18",
+    "local": "Levadiakos",
+    "visitante": "Asteras Tripolis",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Nara Club",
-    "visitante": "Kagoshima United",
+    "fecha": "2026-08-18",
+    "local": "Hapoel Kfar Shalem",
+    "visitante": "Kafr Qasim",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hapoel Rishon LeZion",
+    "visitante": "Hapoel Kfar Saba",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Ironi Modi'in",
+    "visitante": "Maccabi Herzliya",
     "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Osaka",
-    "visitante": "Parceiro Nagano",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Matsumoto Yamaga",
-    "visitante": "Biwako Shiga",
+    "fecha": "2026-08-18",
+    "local": "Maccabi Bnei Raina",
+    "visitante": "Bnei Yehuda",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Ehime FC",
-    "visitante": "Gainare Tottori",
+    "fecha": "2026-08-18",
+    "local": "Benjamín Aceval",
+    "visitante": "Nacional Asuncion",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Estrela U23",
+    "visitante": "Leixões U23",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Drita",
-    "visitante": "Llapi",
+    "fecha": "2026-08-18",
+    "local": "Gil Vicente U23",
+    "visitante": "Academico Viseu U23",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Penafiel U23",
+    "visitante": "Marítimo U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Torreense U23",
+    "visitante": "Portimonense U23",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Kamuzu Barracks",
-    "visitante": "Be Forward Wanderers",
+    "fecha": "2026-08-18",
+    "local": "Vizela U23",
+    "visitante": "Sporting CP U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Farense U23",
+    "visitante": "Estoril U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CSM Reşiţa",
+    "visitante": "Petrolul Ploiesti",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CSM Ramnicu Valcea",
+    "visitante": "Chindia Targoviste",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CSKA Moscow",
+    "visitante": "Akron",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Akhmat",
+    "visitante": "Fakel",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "FC Rostov",
+    "visitante": "Lokomotiv",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Nosaby",
+    "visitante": "IFK Trelleborg",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Böljan",
+    "visitante": "Varbergs BoIS FC",
     "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Leones Negros UDG",
-    "visitante": "CDS Tampico Madero",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "UNAM Pumas U21",
-    "visitante": "Queretaro U21",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Jedinstvo",
-    "visitante": "Berane",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "ADO '20",
-    "visitante": "Hercules",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Groene Ster",
-    "visitante": "Roosendaal",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "UNA",
-    "visitante": "TOGB",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Egersund",
-    "visitante": "Stabaek",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "hodd",
-    "visitante": "Strommen",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Kongsvinger",
-    "visitante": "Haugesund",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Raufoss",
-    "visitante": "Asane",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Sogndal",
-    "visitante": "Sandnes ULF",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Pors Grenland",
-    "visitante": "Bjarg",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Follo",
-    "visitante": "Rana",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Ull/Kisa",
-    "visitante": "Trygg/Lade",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Skeid",
-    "visitante": "Levanger",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Stjørdals-Blink",
-    "visitante": "Hønefoss",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Grorud",
-    "visitante": "Tromsdalen Uil",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Kjelsås",
-    "visitante": "Junkeren",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Vålerenga II",
-    "visitante": "IF Ready",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Strømsgodset II",
-    "visitante": "Skedsmo",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Deportivo Santani",
-    "visitante": "Sportivo Carapeguá",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Resistencia",
-    "visitante": "Deportivo Capiata",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Cerro Porteno",
-    "visitante": "Club Sp. San Lorenzo",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Sportivo Luqueno",
-    "visitante": "Libertad Asuncion",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Olimpia",
-    "visitante": "Sportivo Ameliano",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Sporting Cristal",
-    "visitante": "Sport Huancayo",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FC Cajamarca",
-    "visitante": "Universitario",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Carlos A. Mannucci",
-    "visitante": "Cesar Vallejo",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "ŁKS Łódź",
-    "visitante": "Nieciecza",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Stal Mielec",
-    "visitante": "Polonia Bytom",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Unia Skierniewice",
-    "visitante": "Miedz Legnica",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Znicz Pruszków",
-    "visitante": "Olimpia Grudziądz",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Zawisza Bydgoszcz",
-    "visitante": "Lechia Zielona Góra",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Hutnik Kraków",
-    "visitante": "Legia Warszawa II",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Stal Stalowa Wola",
-    "visitante": "Avia Świdnik",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "SC Braga B",
-    "visitante": "Maia Lidador",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Os Limianos",
-    "visitante": "Chaves II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Brito",
-    "visitante": "Bragança",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Ponte da Barca",
-    "visitante": "Vila Meã",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Rebordosa",
-    "visitante": "Tirsense",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Vinhais",
-    "visitante": "Maria da Fonte",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Camacha",
-    "visitante": "Salgueiros",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Sanjoanense",
-    "visitante": "Beira-Mar",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "União Lamas",
-    "visitante": "Florgrade",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Atlético Malveira",
-    "visitante": "Os Marialvas",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Mortágua",
-    "visitante": "Nazarenos",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "AD Nogueirense",
-    "visitante": "Sertanense",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "O Elvas",
-    "visitante": "Fátima",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Oliveira Hospital",
-    "visitante": "Benfica Castelo Branco",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Portel",
-    "visitante": "Sintrense",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FC Serpa",
-    "visitante": "Vitoria Setubal",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "São João Ver",
-    "visitante": "Fafe",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Vitória de Sernache",
-    "visitante": "SC Covilha",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Varzim",
-    "visitante": "AD Marco 09",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Portimonense",
-    "visitante": "Vizela",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Leixoes",
-    "visitante": "Tondela",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FC Porto B",
-    "visitante": "Farense",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FC Bacau",
-    "visitante": "CSA Steaua Bucureşti",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FC Sochi",
-    "visitante": "Volga Ulyanovsk",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Luki-Energiya",
-    "visitante": "Baltika II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Ural II",
-    "visitante": "Nosta",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Akron II",
-    "visitante": "Krylya Sovetov II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Khimik Dzerzhinsk",
-    "visitante": "Orenburg II",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Dinamo Vladivostok",
-    "visitante": "FK Sokol Saratov",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Novosibirsk",
-    "visitante": "Volgar Astrakhan",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Mashuk-KMV",
-    "visitante": "Kaluga",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Rodina Moskva II",
-    "visitante": "Dinamo Bryansk",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Amkar",
-    "visitante": "Dinamo Stavropol",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Dinamo Moskva II",
-    "visitante": "Irtysh Omsk",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Tyumen",
-    "visitante": "Torpedo Miass",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Heart Of Midlothian",
-    "visitante": "Inverness CT",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Petržalka",
-    "visitante": "Tatran Prešov",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Slávia TU Košice",
-    "visitante": "Stará Ľubovňa",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Dravinja",
-    "visitante": "Bilje",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Daegu FC",
-    "visitante": "Asan Mugunghwa",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Gimpo Citizen",
-    "visitante": "Cheonan City",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Paju Citizen",
-    "visitante": "Seongnam FC",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Seoul E-Land FC",
-    "visitante": "Ansan Greeners",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "IF Karlstad II",
-    "visitante": "Lidköping",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Enskede",
-    "visitante": "Korsnäs",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Skiljebo",
-    "visitante": "Helges",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Sunnersta",
-    "visitante": "Täby",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "IFK Östersund",
-    "visitante": "Lucksta",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Växjö Norra",
-    "visitante": "Staffanstorp United",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Linero",
-    "visitante": "Räppe",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Österlen",
-    "visitante": "Oskarshamns AIK",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Nacka Iliria",
-    "visitante": "Örebro Syrianska",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Forward",
-    "visitante": "Syrianska FC",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Fittja",
-    "visitante": "Rågsved",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Piteå",
-    "visitante": "Vasalund",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Stockholm Internazionale",
-    "visitante": "Arlanda",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FBK Karlstad",
-    "visitante": "Enköping",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Trelleborg",
-    "visitante": "Eskilsminne",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Atvidabergs FF",
-    "visitante": "Skövde AIK",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Rosengård",
-    "visitante": "Utsikten",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Kayserispor",
-    "visitante": "Sivasspor",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Keçiörengücü",
-    "visitante": "Pendikspor",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Mardin 1969",
-    "visitante": "Antalyaspor",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Muğlaspor",
-    "visitante": "Bandırmaspor",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Inhulets",
-    "visitante": "Nyva Ternopil",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Hatta SC",
-    "visitante": "Al-Jazira",
+    "fecha": "2026-08-18",
+    "local": "Sollentuna",
+    "visitante": "Orebro SK",
     "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Baniyas SC",
-    "visitante": "Al Ain",
+    "fecha": "2026-08-18",
+    "local": "AFC Eskilstuna",
+    "visitante": "Oddevold",
     "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Rentistas",
-    "visitante": "Tacuarembo",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Fenix",
-    "visitante": "Plaza Colonia",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "Colón",
-    "visitante": "La Luz",
+    "fecha": "2026-08-18",
+    "local": "Karlberg",
+    "visitante": "IK brage",
     "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Real Monarchs",
-    "visitante": "Minnesota United II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-16",
-    "local": "FC Cincinnati II",
-    "visitante": "Connecticut FC",
+    "fecha": "2026-08-18",
+    "local": "Västra Frölunda",
+    "visitante": "IF Elfsborg",
     "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Gresford Athletic",
-    "visitante": "Brickfield Rangers",
-    "favorito": "DC VISITANTE",
+    "fecha": "2026-08-18",
+    "local": "IFK Skövde",
+    "visitante": "Falkenbergs FF",
+    "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-16",
-    "local": "Liverpool",
-    "visitante": "Como",
+    "fecha": "2026-08-18",
+    "local": "Namungo",
+    "visitante": "Geita Gold",
     "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "FC Noah",
-    "visitante": "Alashkert",
+    "fecha": "2026-08-18",
+    "local": "Atlanta United II",
+    "visitante": "Chicago Fire II",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Trujillanos FC",
+    "visitante": "Urena SC",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
+    "fecha": "2026-08-18",
+    "local": "Mount Pleasant Academy",
+    "visitante": "Cibao",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "AD Cofutpa",
+    "visitante": "ADR Jicaral",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Platense",
+    "visitante": "FAS",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "UNAN Managua",
+    "visitante": "Jalapa",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Nassaji Mazandaran",
+    "visitante": "Esteghlal FC",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CF Pachuca",
+    "visitante": "Puebla",
+    "favorito": "LOCAL ✗",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Tauro FC",
+    "visitante": "CD Arabe Unido",
+    "favorito": "DC LOCAL ✗",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Sogdiana",
+    "visitante": "Qizilqum",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Buxoro",
+    "visitante": "Neftchi",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Godoy Cruz Res.",
+    "visitante": "Vélez Sársfield Res.",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Newell's Old Boys Res.",
+    "visitante": "Lanús Res.",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Atlético Tucumán Res.",
+    "visitante": "River Plate Res.",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Sydney",
+    "visitante": "SD Raiders",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Gremio Prudente U20",
+    "visitante": "RB Bragantino U20",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Pirin Blagoevgrad",
+    "visitante": "Hebar 1918",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Ludogorets II",
+    "visitante": "Vihren",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Deportes Temuco",
+    "visitante": "Recoleta",
+    "favorito": "DC LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Palestino",
+    "visitante": "Huachipato",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Pitbulls Santa Barbara FC",
+    "visitante": "CS Uruguay",
+    "favorito": "DC LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Nykobing FC",
+    "visitante": "Naestved",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Macara",
+    "visitante": "Universidad Catolica",
+    "favorito": "DC VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Bedford Town",
+    "visitante": "Buxton",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Brackley Town",
+    "visitante": "King's Lynn Town",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Darlington 1883",
+    "visitante": "Chester",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hebburn Town",
+    "visitante": "Worksop Town",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hednesford Town",
+    "visitante": "Southport",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hereford",
+    "visitante": "Radcliffe",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Merthyr Town",
+    "visitante": "AFC Telford United",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Morecambe",
+    "visitante": "South Shields",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Oxford City",
+    "visitante": "Harborough Town",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "AFC Totton",
+    "visitante": "Dorking Wanderers",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Dover",
+    "visitante": "Tonbridge Angels",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hemel Hempstead Town",
+    "visitante": "Maidenhead",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Horsham",
+    "visitante": "Hampton & Richmond",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Maidstone Utd",
+    "visitante": "Folkestone Invicta",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Slough Town",
+    "visitante": "Farnham Town",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Torquay",
+    "visitante": "Weston-super-Mare",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Walton & Hersham",
+    "visitante": "Dagenham & Redbridge",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Boreham Wood",
+    "visitante": "Leeds United U21",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Boston United",
+    "visitante": "Birmingham City U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "FC Halifax Town",
+    "visitante": "Derby County U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Gateshead",
+    "visitante": "Nottingham Forest U21",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "AFC Hornchurch",
+    "visitante": "Norwich City U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Scunthorpe",
+    "visitante": "Stoke City U21",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Solihull Moors",
+    "visitante": "Middlesbrough U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Sutton Utd",
+    "visitante": "Leicester City U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Truro City",
+    "visitante": "Southampton U21",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Braintree",
+    "visitante": "Ipswich Town U21",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Ashton United",
+    "visitante": "Whitby Town",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Cleethorpes Town",
+    "visitante": "Alfreton Town",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Curzon Ashton",
+    "visitante": "Bamber Bridge",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Gainsborough Trinity",
+    "visitante": "Stockton Town",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Guiseley AFC",
+    "visitante": "Bury",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hyde United",
+    "visitante": "United of Manchester",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Ilkeston Town",
+    "visitante": "Warrington Town",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Leek Town",
+    "visitante": "AFC Emley",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Redcar Athletic",
+    "visitante": "Lancaster City",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Rylands",
+    "visitante": "Quorn",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Fleetwood Town U21",
+    "visitante": "Preston North End U21",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Bristol City U21",
+    "visitante": "Wigan Athletic U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Peterborough United U21",
+    "visitante": "Queens Park Rangers U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Cardiff City U21",
+    "visitante": "Barnsley U21",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Levadiakos",
+    "visitante": "Asteras Tripolis",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hapoel Kfar Shalem",
+    "visitante": "Kafr Qasim",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Hapoel Rishon LeZion",
+    "visitante": "Hapoel Kfar Saba",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Ironi Modi'in",
+    "visitante": "Maccabi Herzliya",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Maccabi Bnei Raina",
+    "visitante": "Bnei Yehuda",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Benjamín Aceval",
+    "visitante": "Nacional Asuncion",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Estrela U23",
+    "visitante": "Leixões U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Gil Vicente U23",
+    "visitante": "Academico Viseu U23",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Penafiel U23",
+    "visitante": "Marítimo U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Torreense U23",
+    "visitante": "Portimonense U23",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Vizela U23",
+    "visitante": "Sporting CP U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Farense U23",
+    "visitante": "Estoril U23",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CSM Reşiţa",
+    "visitante": "Petrolul Ploiesti",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CSM Ramnicu Valcea",
+    "visitante": "Chindia Targoviste",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "CSKA Moscow",
+    "visitante": "Akron",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Akhmat",
+    "visitante": "Fakel",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "FC Rostov",
+    "visitante": "Lokomotiv",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Nosaby",
+    "visitante": "IFK Trelleborg",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Böljan",
+    "visitante": "Varbergs BoIS FC",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Sollentuna",
+    "visitante": "Orebro SK",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "AFC Eskilstuna",
+    "visitante": "Oddevold",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Karlberg",
+    "visitante": "IK brage",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Västra Frölunda",
+    "visitante": "IF Elfsborg",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "IFK Skövde",
+    "visitante": "Falkenbergs FF",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Namungo",
+    "visitante": "Geita Gold",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Atlanta United II",
+    "visitante": "Chicago Fire II",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Trujillanos FC",
+    "visitante": "Urena SC",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-18",
+    "local": "Mount Pleasant Academy",
+    "visitante": "Cibao",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "AD Cofutpa",
+    "visitante": "ADR Jicaral",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Platense",
+    "visitante": "FAS",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "UNAN Managua",
+    "visitante": "Jalapa",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "AD Cofutpa",
+    "visitante": "ADR Jicaral",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Platense",
+    "visitante": "FAS",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "UNAN Managua",
+    "visitante": "Jalapa",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Sturm Graz",
+    "visitante": "Austria Lustenau",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
     "local": "Qarabag",
-    "visitante": "Şamaxı FK",
+    "visitante": "Kapaz",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Spartak Varna",
-    "visitante": "Septemvri Sofia",
-    "favorito": "DC LOCAL",
+    "fecha": "2026-08-22",
+    "local": "Sabah FA",
+    "visitante": "Sumqayıt",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Arda Kardzhali",
-    "visitante": "Lokomotiv Sofia",
-    "favorito": "DC LOCAL",
+    "fecha": "2026-08-22",
+    "local": "Ludogorets",
+    "visitante": "Slavia Sofia",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Gnistan",
-    "visitante": "Ilves",
-    "favorito": "DC LOCAL",
+    "fecha": "2026-08-22",
+    "local": "Levski Sofia",
+    "visitante": "Spartak Varna",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Gagra",
-    "visitante": "Spaeri",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Zalaegerszegi TE",
-    "visitante": "Ferencvarosi TC",
+    "fecha": "2026-08-22",
+    "local": "Artis",
+    "visitante": "Sparta Praha",
     "favorito": "VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Valur Reykjavik",
-    "visitante": "KA Akureyri",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Fram Reykjavik",
-    "visitante": "Stjarnan",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Džiugas Telšiai",
-    "visitante": "Suduva Marijampole",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Birkirkara",
-    "visitante": "Gzira United",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Hamrun Spartans",
-    "visitante": "Mosta",
+    "fecha": "2026-08-22",
+    "local": "Slavia Praha",
+    "visitante": "Bohemians 1905",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Dečić",
-    "visitante": "Bokelj",
+    "fecha": "2026-08-22",
+    "local": "AEK Athens FC",
+    "visitante": "Iraklis 1908",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Universitatea Cluj",
-    "visitante": "Uta Arad",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "FCSB",
-    "visitante": "FC Botosani",
+    "fecha": "2026-08-22",
+    "local": "Olympiakos Piraeus",
+    "visitante": "Atromitos",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Novi Pazar",
-    "visitante": "Vojvodina",
-    "favorito": "DC VISITANTE",
+    "fecha": "2026-08-22",
+    "local": "BC Rangers",
+    "visitante": "Kitchee",
+    "favorito": "VISITANTE ✓",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Polessya",
+    "fecha": "2026-08-22",
+    "local": "Maccabi Haifa",
+    "visitante": "Hapoel Ramat Gan",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Kelantan Red Warrior FC",
+    "visitante": "Selangor",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "CSF Bălți",
+    "visitante": "Zimbru",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Fenerbahçe",
+    "visitante": "Konyaspor",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Ammanford AFC",
+    "visitante": "GAP Connah S Quay FC",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Canberra Olympic",
+    "visitante": "Brindabella",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Canberra FC",
+    "visitante": "Belconnen United",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Canberra White Eagles",
+    "visitante": "Monaro Panthers",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Dandenong Thunder",
+    "visitante": "Oakleigh Cannons",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Port Melbourne",
+    "visitante": "Eltham Redbacks FC",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Universitario Tarija",
+    "visitante": "Club Universitario",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Guangxi Hengchen",
+    "visitante": "Suzhou Dongwu",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Križevci",
+    "visitante": "Varteks Varaždin",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Vysoké Mýto",
+    "visitante": "Spartak Police n/Metují",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Jarabacoa",
+    "visitante": "Cibao",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Universidad Catolica",
+    "visitante": "Manta FC",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Buxton",
+    "visitante": "Hebburn Town",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Chesham United",
+    "visitante": "Walton & Hersham",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Kiffen",
+    "visitante": "HPS",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "EBK",
+    "visitante": "Honka",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Huima / Urho",
+    "visitante": "Kraft",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Saint Etienne",
+    "visitante": "Grenoble",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Erzgebirge Aue",
+    "visitante": "1899 Hoffenheim",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Njardvik",
+    "visitante": "Völsungur",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Ballkani",
+    "visitante": "Vushtrria",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Rīgas FS II",
+    "visitante": "JDFS Alberts",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Valmiera / BSS",
+    "visitante": "Mārupe",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Minija",
+    "visitante": "Kauno Žalgiris II",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Be Forward Wanderers",
+    "visitante": "Red Lions",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "NAC Breda",
+    "visitante": "Jong Ajax",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Strabane Athletic",
+    "visitante": "H&W Welders",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Sport Huancayo",
+    "visitante": "UCV Moquegua",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Ayacucho FC",
+    "visitante": "Deportivo Binacional",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Porto U19",
+    "visitante": "Moreirense U19",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Sporting CP U19",
+    "visitante": "Oriental U19",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Al-Duhail SC",
+    "visitante": "Al-Sailiya",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Al Sadd",
+    "visitante": "Al Ahli Doha",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Ural",
+    "visitante": "Tekstilshchik",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Angust Nazran",
+    "visitante": "Sevastopol",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Zenit Penza",
+    "visitante": "FK Spartak Tambov",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Salyut-Belgorod",
+    "visitante": "Rotor-2",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Torpedo Miass",
+    "visitante": "Amkar",
+    "favorito": "VISITANTE ✗",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Brora Rangers",
+    "visitante": "Inverurie Loco Works",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "MFK Bytča",
+    "visitante": "Zlaté Moravce",
+    "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Lipany",
+    "visitante": "Vranov nad Topľou",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Suwon City FC",
+    "visitante": "Gimhae City",
+    "favorito": "LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Pocheon",
+    "visitante": "Mokpo City",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Karpaty",
+    "visitante": "Obolon'-Brovar",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Skala 1911 Stryi",
     "visitante": "Zorya Luhansk",
+    "favorito": "VISITANTE ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-22",
+    "local": "Shabab Al Ahli Dubai",
+    "visitante": "Al-Dhafra",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Centro Español",
-    "visitante": "Central Cordoba",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Melbourne Victory II",
-    "visitante": "Northcote City",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Bulleen Lions",
-    "visitante": "North Sunshine Eagles",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Liège",
-    "visitante": "Francs Borains",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Ferroviária",
-    "visitante": "Paysandu",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Guarani Campinas",
-    "visitante": "Ypiranga-RS",
+    "fecha": "2026-08-22",
+    "local": "Al Ain",
+    "visitante": "Khorfakkan",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Deportes Santa Cruz",
-    "visitante": "San Luis",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Deportes Copiapo",
-    "visitante": "Curico Unido",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Santiago Morning",
-    "visitante": "Colina",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Třinec",
-    "visitante": "Ústí nad Labem",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Swansea City U21",
-    "visitante": "Sheffield United U21",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Nõmme United II",
-    "visitante": "Nõmme Kalju II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "AB",
-    "visitante": "KI Klaksvik",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Anagennisi Karditsas",
-    "visitante": "Aris Thessalonikis",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Iraklis 1908",
-    "visitante": "Volos NFC",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Völsungur",
-    "visitante": "Vestri",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Grindavik",
-    "visitante": "Grotta",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "IR Reykjavik",
-    "visitante": "Njardvik",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Leiknir R.",
-    "visitante": "Ægir",
+    "fecha": "2026-08-22",
+    "local": "Rhode Island",
+    "visitante": "Monterey Bay",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Afturelding",
-    "visitante": "HK Kopavogur",
+    "fecha": "2026-08-22",
+    "local": "Deportivo Lara",
+    "visitante": "Puerto Cabello II",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Throttur Reykjavik",
-    "visitante": "Fylkir",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Hapoel Ramat Gan",
-    "visitante": "Beitar Jerusalem",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Al Sulaibikhat",
-    "visitante": "Al Sahel",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Burgan",
-    "visitante": "Shamiya",
+    "fecha": "2026-08-22",
+    "local": "Brickfield Rangers",
+    "visitante": "Penrhyncoch",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
-    "fecha": "2026-08-17",
-    "local": "Sporty",
-    "visitante": "Khaitan",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Auda",
-    "visitante": "Grobiņa",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Molde II",
-    "visitante": "Rosenborg II",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Brann II",
-    "visitante": "Os",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Staal Jørpeland",
-    "visitante": "Haugesund II",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Viking II",
-    "visitante": "Madla",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Fram",
-    "visitante": "Sarpsborg 08 II",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Lillehammer",
-    "visitante": "Lyn II",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "3 de noviembre",
-    "visitante": "Atlético Tembetary",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "General Caballero",
-    "visitante": "Tacuary",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Santos",
-    "visitante": "Alianza Universidad",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Arka Gdynia",
-    "visitante": "Puszcza Niepołomice",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Felgueiras 1932",
-    "visitante": "AVS",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Spartak Kostroma",
-    "visitante": "FC UFA",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Al Taee",
-    "visitante": "Al-Qadisiyah FC",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Slovan Bratislava II",
-    "visitante": "Humenné",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Vänersborgs IF",
-    "visitante": "Vänersborgs FK",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Batman Petrolspor",
-    "visitante": "Boluspor",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-17",
-    "local": "Al Ain U23",
-    "visitante": "Bani Yas U23",
+    "fecha": "2026-08-22",
+    "local": "Aberystwyth Town",
+    "visitante": "Llantwit Major",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
