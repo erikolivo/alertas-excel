@@ -15,7 +15,12 @@ on:
   schedule:
     - cron: "*/5 9-10 * * *"   # 09:00-10:59 UTC = 04:00-05:59 local (seleccion de la manana)
     - cron: "*/5 0 * * *"      # 00:00-00:55 UTC = 19:00-19:55 local (revision de la noche, forzada)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Forzar la revision (fusiona, ignora si ya se completo hoy)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -37,8 +42,8 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          if [ "${{ github.event.schedule }}" = "*/5 0 * * *" ]; then
-            echo "Revision de la noche (19:00 local) -- se fuerza y se fusiona con lo ya seleccionado."
+          if [ "${{ github.event.schedule }}" = "*/5 0 * * *" ] || [ "${{ github.event.inputs.forzar }}" = "true" ]; then
+            echo "Revision forzada -- se fusiona con lo ya seleccionado."
             python seleccionar_partidos.py --forzar
           else
             python seleccionar_partidos.py
