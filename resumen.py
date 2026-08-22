@@ -12,6 +12,7 @@ FASE 2. AJUSTADO a pedido explicito (agosto 2026):
 
 import json
 import datetime
+import sys
 from pathlib import Path
 
 from telegram_utils import enviar_mensaje_telegram, escapar_html
@@ -39,8 +40,13 @@ def _hora_local(hora_inicio_utc_iso):
         return hora_inicio_utc_iso
 
 
-def enviar_resumen():
-    if ya_se_hizo("resumen"):
+def enviar_resumen(forzar=False):
+    """forzar=True (a pedido explicito, agosto 2026) ignora ya_se_hizo()
+    -- util para probar el mensaje manualmente sin esperar al dia
+    siguiente. Vuelve a mandar el mismo resumen de hoy si ya se habia
+    enviado antes; no borra ni duplica nada en partidos_hoy.json, solo
+    reenviar el mensaje a Telegram."""
+    if not forzar and ya_se_hizo("resumen"):
         print("El resumen de hoy ya se envio antes. Nada que hacer.")
         return
 
@@ -81,4 +87,4 @@ def enviar_resumen():
 
 
 if __name__ == "__main__":
-    enviar_resumen()
+    enviar_resumen(forzar="--forzar" in sys.argv)

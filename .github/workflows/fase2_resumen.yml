@@ -5,10 +5,19 @@ name: Fase 2 - Resumen diario
 # ventana de reintento de 07:00-08:30 a solo este colchon corto -- lo
 # suficiente para absorber un atraso tipico de GitHub Actions sin
 # arriesgarse a que llegue tarde en la manana).
+#
+# NUEVO (agosto 2026, a pedido explicito): opcion manual de "forzar"
+# desde Actions -- reenvia el resumen aunque ya se haya mandado hoy,
+# util para probar cambios de formato sin esperar al dia siguiente.
 on:
   schedule:
     - cron: "0,5,10,15 12 * * *"   # 12:00-12:15 UTC = 07:00-07:15 local
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Forzar el reenvio (ignora si ya se hizo hoy)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,7 +39,13 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python resumen.py
+        run: |
+          if [ "${{ github.event.inputs.forzar }}" = "true" ]; then
+            echo "Reenvio forzado del resumen."
+            python resumen.py --forzar
+          else
+            python resumen.py
+          fi
 
       - name: Guardar cambios en data/
         run: |
