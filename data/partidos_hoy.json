@@ -27682,6 +27682,32 @@
       "historial_snapshots": [],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
+    },
+    {
+      "partido": "Atlético Junior vs Once Caldas",
+      "local": "Atlético Junior",
+      "visitante": "Once Caldas",
+      "favorito": "Atlético Junior",
+      "no_favorito": "Once Caldas",
+      "favorito_es_local": true,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 2,
+      "cuota_local_inicial": 1.95,
+      "cuota_empate_inicial": 3.3,
+      "cuota_visitante_inicial": 4.0,
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 1370,
+      "hora_inicio": "2026-08-24T01:15Z",
+      "fixture_id": "401877888",
+      "liga_slug": "col.1",
+      "home_id": "4815",
+      "away_id": "2919",
+      "kickoff_utc": "2026-08-24T01:15Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0
     }
   ]
 }
