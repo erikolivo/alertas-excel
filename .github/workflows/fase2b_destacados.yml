@@ -1,0 +1,49 @@
+name: Fase 2.5 - Destacados del dia
+
+# Local (UTC-5): reintenta cada 5 min entre las 07:30 y las 07:45.
+# NUEVO (agosto 2026, a pedido explicito) -- 6 partidos al azar en 2
+# grupos de 3, de los que ya tienen seguimiento en vivo disponible.
+on:
+  schedule:
+    - cron: "30,35,40,45 12 * * *"   # 12:30-12:45 UTC = 07:30-07:45 local
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Forzar el reenvio (ignora si ya se hizo hoy)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  destacados:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Enviar seleccion destacada del dia
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ github.event.inputs.forzar }}" = "true" ]; then
+            python destacados.py --forzar
+          else
+            python destacados.py
+          fi
+
+      - name: Guardar cambios en data/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          git diff --staged --quiet || git commit -m "Fase 2.5: destacados del dia $(date -u +%Y-%m-%d)"
+          git push

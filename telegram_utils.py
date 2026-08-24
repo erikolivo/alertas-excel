@@ -70,7 +70,7 @@ def _enviar_una_parte(texto):
         return False
 
 
-NOMBRE_PROYECTO = "Alertas ESPN"
+NOMBRE_PROYECTO = "Alertas Excel"  # antes "Alertas ESPN" -- renombrado a pedido explicito, agosto 2026
 
 
 def enviar_mensaje_telegram(texto):

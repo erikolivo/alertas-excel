@@ -32,9 +32,21 @@ ESTADOS_TERMINADO = ("FT", "AET", "PEN")
 VENTANA_ACIERTO_MINUTOS = 15
 
 
-def _calcular_acierto(p, goles_local, goles_visitante):
+def calcular_acierto(p, goles_local, goles_visitante):
+    """
+    CAMBIO (agosto 2026, a pedido explicito): el criterio de acierto
+    ahora depende del tipo de pronostico:
+      - favorito_directo: acierto SOLO si gana el favorito (empate o
+        derrota = fallo). Sin cambios respecto a como funcionaba antes.
+      - doble_oportunidad: acierto si el favorito gana O EMPATA -- solo
+        falla si gana el rival (el pronostico original ya cubria esas
+        dos posibilidades, "empate o gana", asi que un empate cuenta
+        como acierto igual que una victoria).
+    """
     goles_favorito = goles_local if p["favorito_es_local"] else goles_visitante
     goles_rival = goles_visitante if p["favorito_es_local"] else goles_local
+    if p.get("tipo_pronostico") == "doble_oportunidad":
+        return goles_favorito >= goles_rival
     return goles_favorito > goles_rival
 
 
@@ -166,7 +178,7 @@ def cerrar():
         if gh is None or ga is None:
             continue
         p["resultado_final"] = f"{gh}-{ga}"
-        p["acierto"] = _calcular_acierto(p, gh, ga)
+        p["acierto"] = calcular_acierto(p, gh, ga)
 
         _actualizar_rating_propio(p, gh, ga)
         _auditar_alertas(p)

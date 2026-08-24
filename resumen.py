@@ -72,13 +72,23 @@ def enviar_resumen(forzar=False):
         hora = _hora_local(p.get("hora_inicio"))
         estado = "\u2705" if p["fixture_id"] else "\u26A0\uFE0F sin vigilancia en vivo"
         emoji_tipo = EMOJI_TIPO_PRONOSTICO.get(p.get("tipo_pronostico"), EMOJI_TIPO_PRONOSTICO["favorito_directo"])
-        corona_local = f" {CORONA_FAVORITO}" if p.get("favorito_es_local") else ""
-        corona_visitante = f" {CORONA_FAVORITO}" if not p.get("favorito_es_local") else ""
+        marca_favorito = f" {emoji_tipo}{CORONA_FAVORITO}"
+        corona_local = marca_favorito if p.get("favorito_es_local") else ""
+        corona_visitante = marca_favorito if not p.get("favorito_es_local") else ""
         titulo = f"{escapar_html(p['local'])}{corona_local} vs {escapar_html(p['visitante'])}{corona_visitante}"
         lineas.append(
-            f"\n{emoji_tipo} {hora} -- {titulo} {estado}"
+            f"\n{hora} -- {titulo} {estado}"
         )
         lineas.append(f"Favorito: <b>{escapar_html(p['favorito'])}</b>")
+
+        cuota_l = p.get("cuota_local_inicial")
+        cuota_x = p.get("cuota_empate_inicial")
+        cuota_v = p.get("cuota_visitante_inicial")
+        if cuota_l or cuota_v:
+            partes_cuota = [f"{escapar_html(p['local'])} {cuota_l}" if cuota_l else None,
+                             f"Empate {cuota_x}" if cuota_x else None,
+                             f"{escapar_html(p['visitante'])} {cuota_v}" if cuota_v else None]
+            lineas.append("Cuota: " + " | ".join(c for c in partes_cuota if c))
 
     exito = enviar_mensaje_telegram("\n".join(lineas))
     if exito:

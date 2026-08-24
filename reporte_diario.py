@@ -101,6 +101,16 @@ def enviar_reporte():
             pct = round((aciertos / len(resueltos)) * 100, 1)
             lineas.append(f"\nTotal: {aciertos}/{len(resueltos)} aciertos ({pct}%)")
 
+        # NUEVO (agosto 2026, a pedido explicito) -- acierto del grupo
+        # de 6 destacados (destacados.py) por separado del total
+        # general, para poder comparar con el tiempo si la seleccion al
+        # azar rinde distinto al conjunto completo.
+        destacados_resueltos = [p for p in resueltos if p.get("es_destacado")]
+        if destacados_resueltos:
+            aciertos_destacados = sum(1 for p in destacados_resueltos if p["acierto"])
+            pct_destacados = round((aciertos_destacados / len(destacados_resueltos)) * 100, 1)
+            lineas.append(f"\U0001F3B2 Destacados: {aciertos_destacados}/{len(destacados_resueltos)} aciertos ({pct_destacados}%)")
+
         resumen_alertas = _resumen_alertas(partidos)
         if resumen_alertas:
             lineas.append("\n\U0001F514 <b>Acierto por tipo de alerta:</b>")
