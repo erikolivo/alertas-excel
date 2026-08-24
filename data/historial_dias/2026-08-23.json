@@ -1,6 +1,5 @@
 {
   "fecha": "2026-08-23",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Sønderjyske Fodbold vs FC Nordsjælland",
@@ -27765,5 +27764,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 48
 }
