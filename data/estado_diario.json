@@ -1,5 +1,6 @@
 {
   "fecha": "2026-08-24",
   "cierre": true,
-  "reporte": true
+  "reporte": true,
+  "resumen": true
 }
