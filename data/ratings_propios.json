@@ -245,12 +245,12 @@
       "pais": "Colombia",
       "liga": "Primera A",
       "rating": 1500.0,
-      "rd": 350.0,
-      "vol": 0.06,
-      "partidos_jugados": 0,
+      "rd": 290.32,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
       "partidos_bootstrap": 0,
-      "partidos_reales": 0,
-      "ultima_actualizacion": null
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-25"
     },
     "espn:7915": {
       "nombre": "Llaneros FC",
@@ -4751,6 +4751,18 @@
       "partidos_bootstrap": 0,
       "partidos_reales": 1,
       "ultima_actualizacion": "2026-08-24"
+    },
+    "espn:6137": {
+      "nombre": "Atlético Bucaramanga",
+      "pais": null,
+      "liga": null,
+      "rating": 1500.0,
+      "rd": 290.32,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-08-25"
     }
   }
 }
