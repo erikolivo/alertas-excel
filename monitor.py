@@ -95,12 +95,27 @@ MINUTO_FIN_1ER_TIEMPO = 40
 ESCALON_MAXIMO_UMBRAL = 2
 INCREMENTO_POR_ESCALON = 0.4
 
+# Multiplicadores de umbral por prioridad (a pedido explicito, agosto 2026)
+# ALTA: sin cambio (multiplicador 1.0)
+# MEDIA: +40% mas estricto (multiplicador 1.4)
+# BAJA: +80% mas estricto (multiplicador 1.8)
+MULTIPLICADOR_PRIORIDAD = {
+    "ALTA": 1.0,
+    "MEDIA": 1.4,
+    "BAJA": 1.8,
+}
+
 
 def _umbral_efectivo_favorito(partido, diferencia):
     if partido.get("tipo_pronostico") != "favorito_directo":
-        return UMBRAL_Z_ALERTA
-    escalon = max(0, min(diferencia, ESCALON_MAXIMO_UMBRAL))
-    return UMBRAL_Z_ALERTA + (escalon * INCREMENTO_POR_ESCALON)
+        umbral_base = UMBRAL_Z_ALERTA
+    else:
+        escalon = max(0, min(diferencia, ESCALON_MAXIMO_UMBRAL))
+        umbral_base = UMBRAL_Z_ALERTA + (escalon * INCREMENTO_POR_ESCALON)
+
+    prioridad = partido.get("prioridad", "ALTA")
+    multiplicador = MULTIPLICADOR_PRIORIDAD.get(prioridad, 1.0)
+    return umbral_base * multiplicador
 
 
 # =====================================================================
@@ -212,15 +227,16 @@ def _evaluar_dominancia_1er_tiempo(partido, minuto_int):
     return None
 
 
-def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z):
+def _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad="ALTA"):
     conf = momentum.etiqueta_confianza(z)
+    marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
     if diferencia <= 0 and minuto_int >= MINUTO_INICIO_CIERRE and z >= UMBRAL_Z_CIERRE:
-        return "gol_de_cierre", f"\u23F0 Posible gol de cierre -- dominancia alta ({round(dominancia_pct*100)}%, confianza {conf}) en el tramo final."
+        return "gol_de_cierre", f"\u23F0 Posible gol de cierre{marca_prioridad} -- dominancia alta ({round(dominancia_pct*100)}%, confianza {conf}) en el tramo final."
     if diferencia < 0:
-        return "posible_empate", f"\U0001F7E0 Posible empate -- el favorito domina ({round(dominancia_pct*100)}%, confianza {conf})."
+        return "posible_empate", f"\U0001F7E0 Posible empate{marca_prioridad} -- el favorito domina ({round(dominancia_pct*100)}%, confianza {conf})."
     if diferencia == 0:
-        return "posible_victoria_favorito", f"\U0001F7E2 Posible victoria del favorito -- domina claramente ({round(dominancia_pct*100)}%, confianza {conf})."
-    return "ampliacion_marcador", f"\U0001F535 Posible ampliacion de marcador -- sigue dominando ({round(dominancia_pct*100)}%, confianza {conf})."
+        return "posible_victoria_favorito", f"\U0001F7E2 Posible victoria del favorito{marca_prioridad} -- domina claramente ({round(dominancia_pct*100)}%, confianza {conf})."
+    return "ampliacion_marcador", f"\U0001F535 Posible ampliacion de marcador{marca_prioridad} -- sigue dominando ({round(dominancia_pct*100)}%, confianza {conf})."
 
 
 def _evaluar_chequeo_empate(partido, minuto_int, snap_actual, historial):
@@ -302,12 +318,14 @@ def _evaluar_alertas(partido, snap_actual, snap_anterior, minuto):
     resultado = _evaluar_dominancia_general(partido, minuto_int, diferencia)
     if resultado:
         lado_resultado, dominancia_pct, z = resultado
+        prioridad = partido.get("prioridad", "ALTA")
         if lado_resultado == "favorito":
-            tipo, texto = _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z)
+            tipo, texto = _texto_alerta_favorito(diferencia, minuto_int, dominancia_pct, z, prioridad)
         else:
             tipo = "cuidado_rival_presiona"
             conf = momentum.etiqueta_confianza(z)
-            texto = f"\u26A0\uFE0F Cuidado -- el rival esta dominando ({round(dominancia_pct*100)}%, confianza {conf})."
+            marca_prioridad = f" [{prioridad}]" if prioridad != "ALTA" else ""
+            texto = f"\u26A0\uFE0F Cuidado{marca_prioridad} -- el rival esta dominando ({round(dominancia_pct*100)}%, confianza {conf})."
         if tipo and not _ya_se_envio_reciente(partido, tipo, minuto_int):
             return [(tipo, texto)]
 

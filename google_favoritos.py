@@ -22,6 +22,7 @@ _ENCABEZADOS = {
     "cuota_local": {"cuota 1", "cuota local"},
     "cuota_empate": {"cuota x", "cuota empate"},
     "cuota_visitante": {"cuota 2", "cuota visitante"},
+    "prioridad": {"prioridad", "priority", "importancia"},
 }
 
 # Columnas para las que NUNCA se debe aceptar un encabezado con "%" --
@@ -87,6 +88,7 @@ def interpretar_csv(contenido, hoy=None):
     col_cuota_local = _columna(encabezados, "cuota_local")
     col_cuota_empate = _columna(encabezados, "cuota_empate")
     col_cuota_visitante = _columna(encabezados, "cuota_visitante")
+    col_prioridad = _columna(encabezados, "prioridad")
     if not col_favorito or not (col_partido or (col_local and col_visitante)):
         raise ValueError("La hoja debe tener Favorito (o Pick) y Partido, o las columnas Local y Visitante. Encabezados: " + ", ".join(encabezados))
 
@@ -109,12 +111,16 @@ def interpretar_csv(contenido, hoy=None):
             local, visitante = _separar_partido(fila.get(col_partido))
         if local and visitante:
             confianza_texto = str(fila.get(col_confianza, "")).strip() if col_confianza else ""
+            prioridad_texto = str(fila.get(col_prioridad, "")).strip().upper() if col_prioridad else "ALTA"
+            if prioridad_texto not in {"ALTA", "MEDIA", "BAJA"}:
+                prioridad_texto = "ALTA"
             favoritos.append({
                 "local": local, "visitante": visitante, "favorito": favorito, "fila_hoja": numero,
                 "confianza_texto": confianza_texto, "confianza_estrellas": confianza_texto.count("★"),
                 "cuota_local": _num(fila.get(col_cuota_local)) if col_cuota_local else None,
                 "cuota_empate": _num(fila.get(col_cuota_empate)) if col_cuota_empate else None,
                 "cuota_visitante": _num(fila.get(col_cuota_visitante)) if col_cuota_visitante else None,
+                "prioridad": prioridad_texto,
             })
     return favoritos
 
