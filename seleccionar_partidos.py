@@ -175,8 +175,7 @@ def _buscar_fixture(entrada, fixtures):
 
 
 def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas=0,
-                           cuota_local=None, cuota_empate=None, cuota_visitante=None,
-                           prioridad="ALTA"):
+                           cuota_local=None, cuota_empate=None, cuota_visitante=None):
     local, visitante = fixture["teams"]["home"], fixture["teams"]["away"]
     lado = _lado_favorito(favorito_hoja, local["name"], visitante["name"])
     if lado is None:
@@ -188,7 +187,6 @@ def _partido_para_vigilar(fixture, favorito_hoja, fila_hoja, confianza_estrellas
         "favorito": favorito, "no_favorito": no_favorito, "favorito_es_local": lado == "local",
         "tipo_pronostico": _tipo_pronostico(favorito_hoja), "confianza_estrellas": confianza_estrellas,
         "cuota_local_inicial": cuota_local, "cuota_empate_inicial": cuota_empate, "cuota_visitante_inicial": cuota_visitante,
-        "prioridad": prioridad,
         "fuente_favorito": "Google Sheets", "fila_fuente": fila_hoja,
         "hora_inicio": fixture["fixture"]["date"], "fixture_id": fixture["fixture"]["id"], "liga_slug": fixture.get("_liga_slug"),
         "home_id": local["id"], "away_id": visitante["id"], "kickoff_utc": fixture["fixture"]["date"],
@@ -229,7 +227,6 @@ def seleccionar(forzar=False):
             fixture, entrada["favorito"], entrada["fila_hoja"], entrada.get("confianza_estrellas", 0),
             cuota_local=entrada.get("cuota_local"), cuota_empate=entrada.get("cuota_empate"),
             cuota_visitante=entrada.get("cuota_visitante"),
-            prioridad=entrada.get("prioridad", "ALTA"),
         )
         if partido is None:
             favorito_invalido += 1
