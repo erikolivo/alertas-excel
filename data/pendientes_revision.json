@@ -1,76 +1,6 @@
 [
   {
     "fecha": "2026-08-23",
-    "local": "Kitzbühel",
-    "visitante": "Lauterach",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Real Oruro",
-    "visitante": "Bolívar",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Real Tomayapo",
-    "visitante": "Always Ready",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Brusque",
-    "visitante": "Amazonas",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Maringá",
-    "visitante": "Barra",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Marek",
-    "visitante": "Dobrudzha",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Nesebar",
-    "visitante": "Pirin Blagoevgrad",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Yantra 2019",
-    "visitante": "Sportist Svoge",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "U. Catolica",
-    "visitante": "Nublense",
-    "favorito": "DC LOCAL ✗",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
-    "local": "Changchun Yatai",
-    "visitante": "Dongguan United",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-23",
     "local": "Shenzhen 2028",
     "visitante": "Hubei Chufeng Heli",
     "favorito": "DC LOCAL",
@@ -1397,6 +1327,76 @@
     "local": "River Plate Res.",
     "visitante": "Unión Santa Fe Res.",
     "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Gangwon FC",
+    "visitante": "Gwangju FC",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Lokomotiv",
+    "visitante": "Bunyodkor",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Albert Quévy-Mons",
+    "visitante": "Meux",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Independiente del Valle",
+    "visitante": "Gualaceo SC",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Haugesund",
+    "visitante": "Egersund",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Stabaek",
+    "visitante": "Ranheim",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Stromsgodset",
+    "visitante": "hodd",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Volgar Astrakhan",
+    "visitante": "Spartak Nalchik",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Danubio",
+    "visitante": "Atenas",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-26",
+    "local": "Juventud",
+    "visitante": "Oriental",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
 ]
