@@ -22,8 +22,8 @@
       "home_id": "18459",
       "away_id": "21827",
       "kickoff_utc": "2026-08-25T16:10Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "0-0",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "3'",
@@ -1526,19 +1526,22 @@
           "tipo": "posible_victoria_favorito",
           "minuto": "65'",
           "texto": "🟢 Posible victoria del favorito -- domina claramente (78%, confianza MEDIA).",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": false
         },
         {
           "tipo": "posible_victoria_favorito",
           "minuto": "81'",
           "texto": "🟢 Posible victoria del favorito -- domina claramente (88%, confianza MEDIA).",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": false
         },
         {
           "tipo": "posible_victoria_favorito",
           "minuto": "90'+1'",
           "texto": "🟢 Posible victoria del favorito -- domina claramente (71%, confianza ALTA).",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": null
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -1564,8 +1567,8 @@
       "home_id": "2635",
       "away_id": "10105",
       "kickoff_utc": "2026-08-25T18:00Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "2-0",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "1'",
@@ -1741,8 +1744,8 @@
       "home_id": "17703",
       "away_id": "17697",
       "kickoff_utc": "2026-08-25T18:00Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "0-2",
+      "acierto": false,
       "historial_snapshots": [
         {
           "minuto": "7'",
@@ -1904,8 +1907,8 @@
       "home_id": "397",
       "away_id": "396",
       "kickoff_utc": "2026-08-25T18:45Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "3-2",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "3'",
@@ -3148,19 +3151,22 @@
           "tipo": "ampliacion_marcador",
           "minuto": "51'",
           "texto": "🔵 Posible ampliacion de marcador -- sigue dominando (93%, confianza ALTA).",
-          "diferencia_goles": 2
+          "diferencia_goles": 2,
+          "acierto": false
         },
         {
           "tipo": "ampliacion_marcador",
           "minuto": "66'",
           "texto": "🔵 Posible ampliacion de marcador -- sigue dominando (94%, confianza ALTA).",
-          "diferencia_goles": 2
+          "diferencia_goles": 2,
+          "acierto": false
         },
         {
           "tipo": "ampliacion_marcador",
           "minuto": "90'+1'",
           "texto": "🔵 Posible ampliacion de marcador -- sigue dominando (74%, confianza ALTA).",
-          "diferencia_goles": 1
+          "diferencia_goles": 1,
+          "acierto": null
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -3186,8 +3192,8 @@
       "home_id": "373",
       "away_id": "375",
       "kickoff_utc": "2026-08-25T18:45Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "3-1",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "1'",
@@ -4495,7 +4501,8 @@
           "tipo": "siguen_empatados_22",
           "minuto": "37'",
           "texto": "⏱️ Siguen empatados (min 22+) -- Ipswich Town con ligera ventaja.",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": null
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -4521,8 +4528,8 @@
       "home_id": "403",
       "away_id": "19307",
       "kickoff_utc": "2026-08-25T18:45Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "3-0",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "2'",
@@ -5765,7 +5772,8 @@
           "tipo": "cuidado_rival_presiona",
           "minuto": "33'",
           "texto": "⚠️ Cuidado -- el rival esta dominando (97%, confianza MEDIA).",
-          "diferencia_goles": 2
+          "diferencia_goles": 2,
+          "acierto": false
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -5793,8 +5801,8 @@
       "home_id": "7166",
       "away_id": "412",
       "kickoff_utc": "2026-08-25T18:45Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "2-2",
+      "acierto": false,
       "historial_snapshots": [
         {
           "minuto": "2'",
@@ -7037,19 +7045,22 @@
           "tipo": "siguen_empatados_22",
           "minuto": "28'",
           "texto": "⏱️ Siguen empatados (min 22+) -- Annan Athletic con ligera ventaja.",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": null
         },
         {
           "tipo": "siguen_empatados_55",
           "minuto": "57'",
           "texto": "⏱️ Siguen empatados (min 55+) -- Annan Athletic con ligera ventaja.",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": null
         },
         {
           "tipo": "siguen_empatados_70",
           "minuto": "72'",
           "texto": "⏱️ Siguen empatados (min 70+) -- Annan Athletic con ligera ventaja.",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": null
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -7077,8 +7088,8 @@
       "home_id": "2613",
       "away_id": "20992",
       "kickoff_utc": "2026-08-25T18:45Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "2-0",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "2'",
@@ -8342,8 +8353,8 @@
       "home_id": "2980",
       "away_id": "147",
       "kickoff_utc": "2026-08-25T19:00Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "3-0",
+      "acierto": true,
       "historial_snapshots": [
         {
           "minuto": "3'",
@@ -9586,19 +9597,22 @@
           "tipo": "tarjeta_roja",
           "minuto": "8'",
           "texto": "🟥 Tarjeta roja para NEC Nijmegen.",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": null
         },
         {
           "tipo": "posible_victoria_favorito",
           "minuto": "23'",
           "texto": "🟢 Posible victoria del favorito -- domina claramente (100%, confianza MEDIA).",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": false
         },
         {
           "tipo": "posible_victoria_favorito",
           "minuto": "43'",
           "texto": "🟢 Posible victoria del favorito -- domina claramente (84%, confianza MEDIA).",
-          "diferencia_goles": 0
+          "diferencia_goles": 0,
+          "acierto": true
         }
       ],
       "diferencia_maxima_alcanzada": 0,
@@ -9624,8 +9638,8 @@
       "home_id": "10054",
       "away_id": "17700",
       "kickoff_utc": "2026-08-25T23:00Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "2-0",
+      "acierto": true,
       "historial_snapshots": [],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
@@ -9678,8 +9692,8 @@
       "home_id": "2022",
       "away_id": "7632",
       "kickoff_utc": "2026-08-26T00:00Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "1-1",
+      "acierto": true,
       "historial_snapshots": [],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
@@ -9704,8 +9718,8 @@
       "home_id": "17086",
       "away_id": "5489",
       "kickoff_utc": "2026-08-26T00:30Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "3-1",
+      "acierto": true,
       "historial_snapshots": [],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
@@ -9730,8 +9744,8 @@
       "home_id": "5488",
       "away_id": "10309",
       "kickoff_utc": "2026-08-26T01:05Z",
-      "resultado_final": null,
-      "acierto": null,
+      "resultado_final": "0-0",
+      "acierto": false,
       "historial_snapshots": [],
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
