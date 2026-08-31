@@ -1,6 +1,13 @@
 [
   {
     "fecha": "2026-08-30",
+    "local": "Eltham Redbacks FC",
+    "visitante": "Melbourne Knights",
+    "favorito": "DC LOCAL ✓",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-08-30",
     "local": "Brunswick Juventus FC",
     "visitante": "Manningham United Blues",
     "favorito": "LOCAL ✓",
@@ -382,13 +389,6 @@
     "local": "Kolkheti Poti",
     "visitante": "Aragvi Dusheti",
     "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-08-30",
-    "local": "SV Darmstadt 98",
-    "visitante": "Hannover 96",
-    "favorito": "DC VISITANTE",
     "motivo": "no_encontrado_en_espn"
   },
   {
