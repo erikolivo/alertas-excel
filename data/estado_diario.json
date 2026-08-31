@@ -2,5 +2,6 @@
   "fecha": "2026-08-31",
   "cierre": true,
   "reporte": true,
-  "resumen": true
+  "resumen": true,
+  "destacados": true
 }
