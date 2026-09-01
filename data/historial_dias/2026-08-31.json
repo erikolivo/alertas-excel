@@ -1,6 +1,5 @@
 {
   "fecha": "2026-08-31",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Persib vs Manila Digger",
@@ -13593,5 +13592,6 @@
       ],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 44
 }
