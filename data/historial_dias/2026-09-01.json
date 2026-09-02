@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-01",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Parma vs Cremonese",
@@ -37446,5 +37445,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 37
 }
