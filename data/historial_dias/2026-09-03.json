@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-03",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Al Fayha vs Al Kholood",
@@ -16152,5 +16151,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 21
 }
