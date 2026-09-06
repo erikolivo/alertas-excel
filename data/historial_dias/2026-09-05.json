@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-05",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Krylia Sovetov vs Krasnodar",
@@ -39273,5 +39272,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 106
 }
