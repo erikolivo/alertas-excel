@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-08",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "FC Utrecht vs Go Ahead Eagles",
@@ -35609,5 +35608,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 44
 }
