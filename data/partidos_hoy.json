@@ -26,7 +26,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Barcelona vs Feyenoord Rotterdam",
@@ -546,7 +548,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Moreirense vs Benfica",
@@ -624,7 +628,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Santos vs Atlético-MG",
@@ -1014,7 +1020,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Houston Dynamo FC vs Real Salt Lake",
@@ -1170,7 +1178,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Suchitepequez vs CD Guastatoya",
@@ -1222,7 +1232,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "San Diego FC vs San Jose Earthquakes",
