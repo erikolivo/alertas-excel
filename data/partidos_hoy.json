@@ -10704,6 +10704,134 @@
       "aviso_final_enviado": true
     },
     {
+      "partido": "Real Oruro vs Nacional Potosí",
+      "local": "Real Oruro",
+      "visitante": "Nacional Potosí",
+      "favorito": "Nacional Potosí",
+      "no_favorito": "Real Oruro",
+      "favorito_es_local": false,
+      "tipo_pronostico": "doble_oportunidad",
+      "confianza_estrellas": 2,
+      "cuota_local_inicial": 3.1,
+      "cuota_empate_inicial": 3.6,
+      "cuota_visitante_inicial": 2.0,
+      "fuente_favorito": "Google Sheets",
+      "fila_fuente": 13462,
+      "hora_inicio": "2026-09-09T19:00Z",
+      "fixture_id": "401907940",
+      "liga_slug": "all",
+      "home_id": "22523",
+      "away_id": "10311",
+      "kickoff_utc": "2026-09-09T19:00Z",
+      "resultado_final": null,
+      "acierto": null,
+      "historial_snapshots": [
+        {
+          "minuto": "5'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "40'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "45'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "45'+2'",
+          "goles_local": 0,
+          "goles_visitante": 0,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "66'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "71'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "76'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "81'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "86'",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "90'+1'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {}
+        },
+        {
+          "minuto": "90'+6'",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "stats_local": {},
+          "stats_visitante": {}
+        }
+      ],
+      "alertas_enviadas": [],
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1,
+      "aviso_final_enviado": true
+    },
+    {
       "partido": "Chelsea vs Leeds United",
       "local": "Chelsea",
       "visitante": "Leeds United",
@@ -11717,134 +11845,6 @@
         }
       ],
       "diferencia_maxima_alcanzada": 0
-    },
-    {
-      "partido": "Real Oruro vs Nacional Potosí",
-      "local": "Real Oruro",
-      "visitante": "Nacional Potosí",
-      "favorito": "Nacional Potosí",
-      "no_favorito": "Real Oruro",
-      "favorito_es_local": false,
-      "tipo_pronostico": "doble_oportunidad",
-      "confianza_estrellas": 2,
-      "cuota_local_inicial": 3.1,
-      "cuota_empate_inicial": 3.6,
-      "cuota_visitante_inicial": 2.0,
-      "fuente_favorito": "Google Sheets",
-      "fila_fuente": 13462,
-      "hora_inicio": "2026-09-09T19:00Z",
-      "fixture_id": "401907940",
-      "liga_slug": "all",
-      "home_id": "22523",
-      "away_id": "10311",
-      "kickoff_utc": "2026-09-09T19:00Z",
-      "resultado_final": null,
-      "acierto": null,
-      "historial_snapshots": [
-        {
-          "minuto": "5'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "40'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "45'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "45'+2'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "45'+2'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "45'+2'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "45'+2'",
-          "goles_local": 0,
-          "goles_visitante": 0,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "66'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "71'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "76'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "81'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "86'",
-          "goles_local": 0,
-          "goles_visitante": 1,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "90'+1'",
-          "goles_local": 0,
-          "goles_visitante": 2,
-          "stats_local": {},
-          "stats_visitante": {}
-        },
-        {
-          "minuto": "90'+6'",
-          "goles_local": 0,
-          "goles_visitante": 2,
-          "stats_local": {},
-          "stats_visitante": {}
-        }
-      ],
-      "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0,
-      "es_destacado": true,
-      "grupo_destacado": 1,
-      "aviso_final_enviado": true
     },
     {
       "partido": "Moreirense vs Benfica",
