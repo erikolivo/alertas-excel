@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-09",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Al Kholood vs Al Shabab",
@@ -20688,5 +20687,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 50
 }
