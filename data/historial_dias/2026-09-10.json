@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-10",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Fenerbahce vs AS Roma",
@@ -10512,5 +10511,6 @@
       "es_destacado": true,
       "grupo_destacado": 2
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 16
 }
