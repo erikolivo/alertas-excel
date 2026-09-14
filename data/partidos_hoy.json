@@ -78,7 +78,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Torino vs AS Roma",
@@ -156,7 +158,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Djurgården vs GAIS",
@@ -182,7 +186,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "IK Sirius vs Degerfors IF",
@@ -234,7 +240,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Jong PSV vs Jong AZ",
@@ -260,7 +268,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 2
     },
     {
       "partido": "Jong FC Utrecht vs Jong Ajax",
@@ -598,7 +608,9 @@
       "acierto": null,
       "historial_snapshots": [],
       "alertas_enviadas": [],
-      "diferencia_maxima_alcanzada": 0
+      "diferencia_maxima_alcanzada": 0,
+      "es_destacado": true,
+      "grupo_destacado": 1
     },
     {
       "partido": "Botafogo-SP vs Goiás",
