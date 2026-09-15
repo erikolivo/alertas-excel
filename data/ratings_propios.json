@@ -28,13 +28,13 @@
       "nombre": "Banfield",
       "pais": "Argentina",
       "liga": "Liga Profesional Argentina",
-      "rating": 1418.35,
-      "rd": 224.01,
-      "vol": 0.059999,
-      "partidos_jugados": 3,
+      "rating": 1435.31,
+      "rd": 200.44,
+      "vol": 0.059997,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-08-31"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:4": {
       "nombre": "Belgrano (Córdoba)",
@@ -184,13 +184,13 @@
       "nombre": "Universidad Católica (Quito)",
       "pais": "Ecuador",
       "liga": "Liga Pro",
-      "rating": 1738.51,
-      "rd": 199.12,
-      "vol": 0.059998,
-      "partidos_jugados": 4,
+      "rating": 1765.35,
+      "rd": 188.59,
+      "vol": 0.059997,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-07"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:4812": {
       "nombre": "Deportivo Cuenca",
@@ -568,13 +568,13 @@
       "nombre": "León",
       "pais": "France",
       "liga": "Leagues Cup",
-      "rating": 1711.83,
-      "rd": 218.37,
-      "vol": 0.060001,
-      "partidos_jugados": 3,
+      "rating": 1736.56,
+      "rd": 207.87,
+      "vol": 0.06,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-07"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:12011": {
       "nombre": "Orlando City SC",
@@ -592,13 +592,13 @@
       "nombre": "Atlético de San Luis",
       "pais": "Mexico",
       "liga": "Leagues Cup",
-      "rating": 1281.94,
-      "rd": 258.37,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1250.2,
+      "rd": 240.8,
+      "vol": 0.059998,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-06"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:220": {
       "nombre": "Monterrey",
@@ -1732,13 +1732,13 @@
       "nombre": "Degerfors IF",
       "pais": null,
       "liga": null,
-      "rating": 1662.31,
-      "rd": 290.32,
-      "vol": 0.06,
-      "partidos_jugados": 1,
+      "rating": 1446.24,
+      "rd": 257.4,
+      "vol": 0.060002,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-08-17"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:2556": {
       "nombre": "IFK Göteborg",
@@ -1756,13 +1756,13 @@
       "nombre": "Djurgården",
       "pais": null,
       "liga": null,
-      "rating": 1616.33,
-      "rd": 211.7,
-      "vol": 0.059998,
-      "partidos_jugados": 4,
+      "rating": 1676.27,
+      "rd": 192.31,
+      "vol": 0.059997,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:994": {
       "nombre": "AIK",
@@ -1984,25 +1984,25 @@
       "nombre": "FC Midtjylland",
       "pais": null,
       "liga": null,
-      "rating": 1668.58,
-      "rd": 202.19,
+      "rating": 1740.91,
+      "rd": 186.09,
       "vol": 0.059996,
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:8222": {
       "nombre": "GAIS",
       "pais": null,
       "liga": null,
-      "rating": 1485.31,
-      "rd": 241.22,
-      "vol": 0.060002,
-      "partidos_jugados": 3,
+      "rating": 1410.78,
+      "rd": 211.59,
+      "vol": 0.060001,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-01"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:2720": {
       "nombre": "Malmö FF",
@@ -2104,13 +2104,13 @@
       "nombre": "Villarreal",
       "pais": null,
       "liga": null,
-      "rating": 1365.32,
-      "rd": 210.68,
-      "vol": 0.059997,
-      "partidos_jugados": 4,
+      "rating": 1336.55,
+      "rd": 198.8,
+      "vol": 0.059996,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-09"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:6907": {
       "nombre": "TSV Hartberg",
@@ -2200,13 +2200,13 @@
       "nombre": "Sandefjord",
       "pais": null,
       "liga": null,
-      "rating": 1618.12,
-      "rd": 251.26,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1515.24,
+      "rd": 216.27,
+      "vol": 0.059998,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-05"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:257": {
       "nombre": "Rangers",
@@ -2260,13 +2260,13 @@
       "nombre": "Newcastle United",
       "pais": null,
       "liga": null,
-      "rating": 1622.23,
-      "rd": 205.08,
-      "vol": 0.059997,
-      "partidos_jugados": 4,
+      "rating": 1490.3,
+      "rd": 191.7,
+      "vol": 0.06,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-09"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:180": {
       "nombre": "Strasbourg",
@@ -2488,13 +2488,13 @@
       "nombre": "Moreirense",
       "pais": null,
       "liga": null,
-      "rating": 1394.27,
-      "rd": 213.62,
+      "rating": 1486.05,
+      "rd": 191.34,
       "vol": 0.059998,
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:12597": {
       "nombre": "Burgos",
@@ -2740,13 +2740,13 @@
       "nombre": "Braga",
       "pais": null,
       "liga": null,
-      "rating": 1566.12,
-      "rd": 201.17,
-      "vol": 0.059999,
-      "partidos_jugados": 4,
+      "rating": 1625.12,
+      "rd": 184.25,
+      "vol": 0.059998,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:3699": {
       "nombre": "Gil Vicente",
@@ -2776,13 +2776,13 @@
       "nombre": "Maritimo",
       "pais": null,
       "liga": null,
-      "rating": 1424.62,
-      "rd": 225.39,
+      "rating": 1323.62,
+      "rd": 198.85,
       "vol": 0.06,
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-06"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:98": {
       "nombre": "Las Palmas",
@@ -2884,13 +2884,13 @@
       "nombre": "Instituto (Córdoba)",
       "pais": null,
       "liga": null,
-      "rating": 1750.54,
-      "rd": 256.35,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1809.03,
+      "rd": 231.77,
+      "vol": 0.059998,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-01"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:3956": {
       "nombre": "Pisa",
@@ -2932,13 +2932,13 @@
       "nombre": "Al Ahli",
       "pais": null,
       "liga": null,
-      "rating": 1619.22,
-      "rd": 168.21,
-      "vol": 0.059999,
-      "partidos_jugados": 7,
+      "rating": 1608.0,
+      "rd": 160.69,
+      "vol": 0.059998,
+      "partidos_jugados": 8,
       "partidos_bootstrap": 0,
-      "partidos_reales": 7,
-      "ultima_actualizacion": "2026-09-12"
+      "partidos_reales": 8,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:130901": {
       "nombre": "Al Zulfi",
@@ -2992,13 +2992,13 @@
       "nombre": "Brøndby IF",
       "pais": null,
       "liga": null,
-      "rating": 1662.31,
-      "rd": 290.32,
-      "vol": 0.06,
-      "partidos_jugados": 1,
+      "rating": 1527.65,
+      "rd": 237.59,
+      "vol": 0.059999,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-08-18"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:8118": {
       "nombre": "Sønderjyske Fodbold",
@@ -3100,25 +3100,25 @@
       "nombre": "Jong AZ",
       "pais": null,
       "liga": null,
-      "rating": 1584.2,
-      "rd": 229.24,
-      "vol": 0.059999,
-      "partidos_jugados": 3,
+      "rating": 1557.57,
+      "rd": 203.99,
+      "vol": 0.059997,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-12"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:10597": {
       "nombre": "Jong Ajax",
       "pais": null,
       "liga": null,
-      "rating": 1440.08,
-      "rd": 210.04,
+      "rating": 1351.85,
+      "rd": 187.97,
       "vol": 0.059998,
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-12"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:3707": {
       "nombre": "FC Emmen",
@@ -3136,13 +3136,13 @@
       "nombre": "Jong FC Utrecht",
       "pais": null,
       "liga": null,
-      "rating": 1420.97,
-      "rd": 211.91,
+      "rating": 1510.61,
+      "rd": 189.19,
       "vol": 0.059998,
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-12"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:154": {
       "nombre": "Vitesse",
@@ -3400,13 +3400,13 @@
       "nombre": "Remo",
       "pais": null,
       "liga": null,
-      "rating": 1275.13,
-      "rd": 218.2,
-      "vol": 0.059997,
-      "partidos_jugados": 4,
+      "rating": 1254.57,
+      "rd": 209.01,
+      "vol": 0.059996,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-07"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:977": {
       "nombre": "Shanghai Shenhua",
@@ -3748,13 +3748,13 @@
       "nombre": "Fenerbahce",
       "pais": null,
       "liga": null,
-      "rating": 1658.26,
-      "rd": 186.28,
-      "vol": 0.059996,
-      "partidos_jugados": 5,
+      "rating": 1650.76,
+      "rd": 173.39,
+      "vol": 0.059994,
+      "partidos_jugados": 6,
       "partidos_bootstrap": 0,
-      "partidos_reales": 5,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 6,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:167": {
       "nombre": "Lyon",
@@ -3976,13 +3976,13 @@
       "nombre": "Internazionale",
       "pais": null,
       "liga": null,
-      "rating": 1644.36,
-      "rd": 214.84,
+      "rating": 1732.79,
+      "rd": 194.12,
       "vol": 0.06,
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-09"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:4007": {
       "nombre": "Monza",
@@ -4516,13 +4516,13 @@
       "nombre": "Torino",
       "pais": null,
       "liga": null,
-      "rating": 1261.63,
-      "rd": 199.38,
-      "vol": 0.06,
-      "partidos_jugados": 4,
+      "rating": 1247.89,
+      "rd": 193.51,
+      "vol": 0.059999,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-06"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:103": {
       "nombre": "AC Milan",
@@ -4624,13 +4624,13 @@
       "nombre": "Deportivo Pasto",
       "pais": null,
       "liga": null,
-      "rating": 1238.99,
-      "rd": 218.33,
-      "vol": 0.059998,
-      "partidos_jugados": 4,
+      "rating": 1423.26,
+      "rd": 207.95,
+      "vol": 0.060003,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:2684": {
       "nombre": "Nacional",
@@ -4948,13 +4948,13 @@
       "nombre": "Bodo/Glimt",
       "pais": null,
       "liga": null,
-      "rating": 1647.8,
-      "rd": 218.49,
+      "rating": 1728.76,
+      "rd": 196.34,
       "vol": 0.060001,
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:147": {
       "nombre": "NEC Nijmegen",
@@ -5428,13 +5428,13 @@
       "nombre": "Real Betis",
       "pais": null,
       "liga": null,
-      "rating": 1728.35,
-      "rd": 235.03,
-      "vol": 0.060005,
-      "partidos_jugados": 3,
+      "rating": 1762.48,
+      "rd": 218.31,
+      "vol": 0.060004,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-09"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:133193": {
       "nombre": "Fatima",
@@ -5560,13 +5560,13 @@
       "nombre": "Udinese",
       "pais": null,
       "liga": null,
-      "rating": 1669.6,
-      "rd": 259.41,
+      "rating": 1546.47,
+      "rd": 221.02,
       "vol": 0.059998,
-      "partidos_jugados": 2,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-03"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:20043": {
       "nombre": "Volos NFC",
@@ -5764,13 +5764,13 @@
       "nombre": "Parma",
       "pais": null,
       "liga": null,
-      "rating": 1331.63,
-      "rd": 257.55,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1295.81,
+      "rd": 238.81,
+      "vol": 0.059997,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-02"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:5579": {
       "nombre": "OH Leuven",
@@ -5836,13 +5836,13 @@
       "nombre": "América de Cali",
       "pais": null,
       "liga": null,
-      "rating": 1681.55,
-      "rd": 212.03,
-      "vol": 0.059997,
-      "partidos_jugados": 3,
+      "rating": 1508.73,
+      "rd": 202.54,
+      "vol": 0.060002,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:3457": {
       "nombre": "Vitória",
@@ -5860,13 +5860,13 @@
       "nombre": "Botafogo-SP",
       "pais": null,
       "liga": null,
-      "rating": 1215.44,
-      "rd": 235.52,
-      "vol": 0.059998,
-      "partidos_jugados": 3,
+      "rating": 1154.11,
+      "rd": 213.8,
+      "vol": 0.059997,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:17313": {
       "nombre": "Cuiabá",
@@ -5896,13 +5896,13 @@
       "nombre": "Estudiantes de Río Cuarto",
       "pais": null,
       "liga": null,
-      "rating": 1500.0,
-      "rd": 290.32,
-      "vol": 0.059999,
-      "partidos_jugados": 1,
+      "rating": 1429.29,
+      "rd": 253.59,
+      "vol": 0.059998,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-08-30"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:9720": {
       "nombre": "CF Montréal",
@@ -6604,13 +6604,13 @@
       "nombre": "Al Qadsiah",
       "pais": null,
       "liga": null,
-      "rating": 1757.76,
-      "rd": 203.66,
-      "vol": 0.059998,
-      "partidos_jugados": 4,
+      "rating": 1796.37,
+      "rd": 192.55,
+      "vol": 0.059997,
+      "partidos_jugados": 5,
       "partidos_bootstrap": 0,
-      "partidos_reales": 4,
-      "ultima_actualizacion": "2026-09-12"
+      "partidos_reales": 5,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:21446": {
       "nombre": "Al-Faisaly",
@@ -6676,13 +6676,13 @@
       "nombre": "América Mineiro",
       "pais": null,
       "liga": null,
-      "rating": 1501.91,
-      "rd": 240.25,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1363.0,
+      "rd": 214.97,
+      "vol": 0.06,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-05"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:4139": {
       "nombre": "Universidad de Chile",
@@ -6784,13 +6784,13 @@
       "nombre": "Orense",
       "pais": null,
       "liga": null,
-      "rating": 1386.15,
-      "rd": 225.46,
-      "vol": 0.060002,
-      "partidos_jugados": 3,
+      "rating": 1353.43,
+      "rd": 209.92,
+      "vol": 0.060001,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:5570": {
       "nombre": "Sport Boys",
@@ -6916,13 +6916,13 @@
       "nombre": "Bahia",
       "pais": null,
       "liga": null,
-      "rating": 1748.15,
-      "rd": 239.46,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1771.7,
+      "rd": 227.29,
+      "vol": 0.059998,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-06"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:2668": {
       "nombre": "Emelec",
@@ -7228,13 +7228,13 @@
       "nombre": "AS Roma",
       "pais": null,
       "liga": null,
-      "rating": 1782.35,
-      "rd": 212.17,
-      "vol": 0.059999,
-      "partidos_jugados": 3,
+      "rating": 1797.4,
+      "rd": 205.09,
+      "vol": 0.059998,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:443": {
       "nombre": "Panathinaikos",
@@ -7276,13 +7276,13 @@
       "nombre": "IK Sirius",
       "pais": null,
       "liga": null,
-      "rating": 1383.36,
-      "rd": 286.93,
-      "vol": 0.059999,
-      "partidos_jugados": 1,
+      "rating": 1594.36,
+      "rd": 255.23,
+      "vol": 0.060001,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-01"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:97": {
       "nombre": "Osasuna",
@@ -7312,13 +7312,13 @@
       "nombre": "Jong PSV",
       "pais": null,
       "liga": null,
-      "rating": 1463.72,
-      "rd": 227.08,
-      "vol": 0.059999,
-      "partidos_jugados": 3,
+      "rating": 1489.83,
+      "rd": 202.59,
+      "vol": 0.059997,
+      "partidos_jugados": 4,
       "partidos_bootstrap": 0,
-      "partidos_reales": 3,
-      "ultima_actualizacion": "2026-09-12"
+      "partidos_reales": 4,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:132335": {
       "nombre": "Amed SFK",
@@ -7420,13 +7420,13 @@
       "nombre": "Estoril",
       "pais": null,
       "liga": null,
-      "rating": 1462.78,
-      "rd": 250.35,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1377.49,
+      "rd": 215.88,
+      "vol": 0.059997,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:101": {
       "nombre": "Rayo Vallecano",
@@ -7492,13 +7492,13 @@
       "nombre": "Unión La Calera",
       "pais": null,
       "liga": null,
-      "rating": 1282.49,
-      "rd": 248.05,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1501.2,
+      "rd": 233.48,
+      "vol": 0.060002,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-07"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:10094": {
       "nombre": "UCV FC",
@@ -7588,13 +7588,13 @@
       "nombre": "Barracas Central",
       "pais": null,
       "liga": null,
-      "rating": 1500.76,
-      "rd": 243.73,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1480.5,
+      "rd": 212.69,
+      "vol": 0.059996,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:6101": {
       "nombre": "Cúcuta Deportivo",
@@ -8668,13 +8668,13 @@
       "nombre": "Deportes Limache",
       "pais": null,
       "liga": null,
-      "rating": 1728.9,
-      "rd": 245.53,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1515.09,
+      "rd": 231.4,
+      "vol": 0.060002,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:130899": {
       "nombre": "Neom SC",
@@ -8908,13 +8908,13 @@
       "nombre": "Red Star FC 93",
       "pais": null,
       "liga": null,
-      "rating": 1662.31,
-      "rd": 290.32,
-      "vol": 0.06,
-      "partidos_jugados": 1,
+      "rating": 1750.54,
+      "rd": 256.35,
+      "vol": 0.059999,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-05"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:10678": {
       "nombre": "Pau",
@@ -9052,25 +9052,25 @@
       "nombre": "Defensores de Belgrano",
       "pais": null,
       "liga": null,
-      "rating": 1623.12,
-      "rd": 244.85,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1696.42,
+      "rd": 222.73,
+      "vol": 0.059998,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:2572": {
       "nombre": "Como",
       "pais": null,
       "liga": null,
-      "rating": 1733.16,
-      "rd": 239.76,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1765.38,
+      "rd": 224.74,
+      "vol": 0.059997,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:132170": {
       "nombre": "Flackwell Heath",
@@ -9208,13 +9208,13 @@
       "nombre": "Antigua GFC",
       "pais": null,
       "liga": null,
-      "rating": 1750.54,
-      "rd": 256.35,
-      "vol": 0.059999,
-      "partidos_jugados": 2,
+      "rating": 1809.03,
+      "rd": 231.77,
+      "vol": 0.059998,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:131213": {
       "nombre": "Aurora FC",
@@ -9256,13 +9256,13 @@
       "nombre": "Leeds United",
       "pais": null,
       "liga": null,
-      "rating": 1336.36,
-      "rd": 242.21,
-      "vol": 0.059998,
-      "partidos_jugados": 2,
+      "rating": 1522.06,
+      "rd": 219.51,
+      "vol": 0.060001,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:384": {
       "nombre": "Crystal Palace",
@@ -10048,13 +10048,13 @@
       "nombre": "São Bernardo",
       "pais": null,
       "liga": null,
-      "rating": 1337.57,
-      "rd": 258.26,
-      "vol": 0.060003,
-      "partidos_jugados": 2,
+      "rating": 1496.87,
+      "rd": 226.28,
+      "vol": 0.060004,
+      "partidos_jugados": 3,
       "partidos_bootstrap": 0,
-      "partidos_reales": 2,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 3,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:4422": {
       "nombre": "Palestino",
@@ -10120,13 +10120,13 @@
       "nombre": "Gaziantep FK",
       "pais": null,
       "liga": null,
-      "rating": 1603.72,
-      "rd": 282.17,
-      "vol": 0.059999,
-      "partidos_jugados": 1,
+      "rating": 1621.64,
+      "rd": 232.05,
+      "vol": 0.059997,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-08"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:7656": {
       "nombre": "Caykur Rizespor",
@@ -10780,13 +10780,13 @@
       "nombre": "Suchitepequez",
       "pais": null,
       "liga": null,
-      "rating": 1500.0,
-      "rd": 290.32,
-      "vol": 0.059999,
-      "partidos_jugados": 1,
+      "rating": 1429.29,
+      "rd": 253.59,
+      "vol": 0.059998,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-10"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:17516": {
       "nombre": "CD Guastatoya",
@@ -10876,13 +10876,13 @@
       "nombre": "Goiás",
       "pais": null,
       "liga": null,
-      "rating": 1396.92,
-      "rd": 289.91,
-      "vol": 0.059999,
-      "partidos_jugados": 1,
+      "rating": 1482.06,
+      "rd": 247.19,
+      "vol": 0.059998,
+      "partidos_jugados": 2,
       "partidos_bootstrap": 0,
-      "partidos_reales": 1,
-      "ultima_actualizacion": "2026-09-11"
+      "partidos_reales": 2,
+      "ultima_actualizacion": "2026-09-15"
     },
     "espn:19425": {
       "nombre": "Always Ready",
@@ -11279,6 +11279,126 @@
       "partidos_bootstrap": 0,
       "partidos_reales": 1,
       "ultima_actualizacion": "2026-09-14"
+    },
+    "espn:7530": {
+      "nombre": "Neftchi Fergana",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:20912": {
+      "nombre": "Air Force Club",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:790": {
+      "nombre": "Shabab Al-Ahli",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:15107": {
+      "nombre": "Traktor Sazi FC",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:7525": {
+      "nombre": "Esteghlal",
+      "pais": null,
+      "liga": null,
+      "rating": 1662.31,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:7135": {
+      "nombre": "Al Sadd",
+      "pais": null,
+      "liga": null,
+      "rating": 1337.69,
+      "rd": 290.32,
+      "vol": 0.06,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:7123": {
+      "nombre": "Pakhtakor Tashkent",
+      "pais": null,
+      "liga": null,
+      "rating": 1553.11,
+      "rd": 266.82,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:8365": {
+      "nombre": "Al Wasl",
+      "pais": null,
+      "liga": null,
+      "rating": 1411.56,
+      "rd": 286.18,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:18260": {
+      "nombre": "Deportivo Madryn",
+      "pais": null,
+      "liga": null,
+      "rating": 1372.24,
+      "rd": 278.02,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
+    },
+    "espn:177": {
+      "nombre": "Metz",
+      "pais": null,
+      "liga": null,
+      "rating": 1383.36,
+      "rd": 286.93,
+      "vol": 0.059999,
+      "partidos_jugados": 1,
+      "partidos_bootstrap": 0,
+      "partidos_reales": 1,
+      "ultima_actualizacion": "2026-09-15"
     }
   }
 }
