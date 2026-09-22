@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-21",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "New Caledonia vs Solomon Islands",
@@ -4881,5 +4880,6 @@
       "es_destacado": true,
       "grupo_destacado": 2
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 8
 }
