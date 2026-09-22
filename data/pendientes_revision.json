@@ -1,33 +1,5 @@
 [
   {
-    "fecha": "2026-09-20",
-    "local": "Hong Kong U23",
-    "visitante": "Thailand U23",
-    "favorito": "VISITANTE ✓",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-20",
-    "local": "Dynamos",
-    "visitante": "Herentals",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-20",
-    "local": "San Carlos",
-    "visitante": "CS Cartagines",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-20",
-    "local": "Malacateco",
-    "visitante": "Mixco",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
     "fecha": "2026-09-21",
     "local": "Oţelul",
     "visitante": "Corvinul Hunedoara",
@@ -46,6 +18,13 @@
     "local": "Central Espanol",
     "visitante": "Atletico Torque",
     "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-09-21",
+    "local": "Criciuma",
+    "visitante": "Operario-PR",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -256,6 +235,13 @@
     "local": "Central Espanol",
     "visitante": "Atletico Torque",
     "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-09-21",
+    "local": "Criciuma",
+    "visitante": "Operario-PR",
+    "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -585,6 +571,13 @@
     "local": "Ituano U20",
     "visitante": "Palmeiras U20",
     "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-09-21",
+    "local": "Criciuma",
+    "visitante": "Operario-PR",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
@@ -1061,6 +1054,13 @@
     "local": "Ituano U20",
     "visitante": "Palmeiras U20",
     "favorito": "VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-09-21",
+    "local": "Criciuma",
+    "visitante": "Operario-PR",
+    "favorito": "DC LOCAL",
     "motivo": "no_encontrado_en_espn"
   },
   {
