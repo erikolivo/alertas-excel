@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-25",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Australia vs Brazil",
@@ -33600,5 +33599,6 @@
       "es_destacado": true,
       "grupo_destacado": 2
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 61
 }
