@@ -1,6 +1,5 @@
 {
   "fecha": "2026-09-27",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "Vanuatu vs New Caledonia",
@@ -29217,5 +29216,6 @@
       "alertas_enviadas": [],
       "diferencia_maxima_alcanzada": 0
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 52
 }
