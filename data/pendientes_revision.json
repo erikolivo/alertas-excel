@@ -1,146 +1,6 @@
 [
   {
     "fecha": "2026-09-30",
-    "local": "Hapoel Bnei Musmus",
-    "visitante": "Maccabi K. Ata Bialik",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Ironi Nesher",
-    "visitante": "Beitar Nahariya",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Nordia Jerusalem",
-    "visitante": "Hapoel Hadera",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Hapoel Nazareth Illit",
-    "visitante": "Tzeirey Tamra",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Hapoel Mahane Yehuda",
-    "visitante": "Dimona",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Maccabi Ashdod",
-    "visitante": "Holon Yermiyahu",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Hapoel Beit Shean",
-    "visitante": "Ironi Baka El Garbiya",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Alessandria",
-    "visitante": "Imperia",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Khovd",
-    "visitante": "Ulaanbaatar",
-    "favorito": "VISITANTE ✓",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Rudar",
-    "visitante": "Berane",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Zeta",
-    "visitante": "Kom",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Follo",
-    "visitante": "Sarpsborg 08 FF",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Hønefoss",
-    "visitante": "KFUM Oslo",
-    "favorito": "VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Independiente F.b.c.",
-    "visitante": "Nacional Asuncion",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Cerro Porteno",
-    "visitante": "Rubio NU",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Sestao River",
-    "visitante": "Terrassa",
-    "favorito": "DC LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Navalcarnero",
-    "visitante": "Real Murcia",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Kreuzlingen",
-    "visitante": "Brühl",
-    "favorito": "DC VISITANTE",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Cerro Largo",
-    "visitante": "Rentistas",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
-    "local": "Defensor Sporting",
-    "visitante": "Plaza Colonia",
-    "favorito": "LOCAL",
-    "motivo": "no_encontrado_en_espn"
-  },
-  {
-    "fecha": "2026-09-30",
     "local": "Egypt U20",
     "visitante": "Tunisia U20",
     "favorito": "DC LOCAL",
@@ -1396,6 +1256,146 @@
     "fecha": "2026-09-30",
     "local": "Czech Republic U21",
     "visitante": "Bulgaria U21",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Envigado",
+    "visitante": "Orsomarso",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Dayrout",
+    "visitante": "Ismaily SC",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "El Mansura",
+    "visitante": "Masar",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Pharco",
+    "visitante": "Tersana",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Bastia",
+    "visitante": "Orleans",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "North District",
+    "visitante": "Southern District",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Shatin",
+    "visitante": "Hong Kong FC",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Maccabi Yavne",
+    "visitante": "Ironi Beit Shemesh",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Kfar Saba 1928",
+    "visitante": "Hapoel Marmorek",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Indonesia",
+    "visitante": "Bangladesh",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Envigado",
+    "visitante": "Orsomarso",
+    "favorito": "LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Dayrout",
+    "visitante": "Ismaily SC",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "El Mansura",
+    "visitante": "Masar",
+    "favorito": "DC VISITANTE",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Pharco",
+    "visitante": "Tersana",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Bastia",
+    "visitante": "Orleans",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "North District",
+    "visitante": "Southern District",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Shatin",
+    "visitante": "Hong Kong FC",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Maccabi Yavne",
+    "visitante": "Ironi Beit Shemesh",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Kfar Saba 1928",
+    "visitante": "Hapoel Marmorek",
+    "favorito": "DC LOCAL",
+    "motivo": "no_encontrado_en_espn"
+  },
+  {
+    "fecha": "2026-10-01",
+    "local": "Indonesia",
+    "visitante": "Bangladesh",
     "favorito": "LOCAL",
     "motivo": "no_encontrado_en_espn"
   }
