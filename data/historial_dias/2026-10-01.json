@@ -1,6 +1,5 @@
 {
   "fecha": "2026-10-01",
-  "seleccion_version": 6,
   "partidos": [
     {
       "partido": "SSV Jahn Regensburg vs WSG Swarovski Tirol",
@@ -6000,5 +5999,6 @@
       "grupo_destacado": 1,
       "aviso_final_enviado": true
     }
-  ]
+  ],
+  "espn_peticiones_usadas": 18
 }
